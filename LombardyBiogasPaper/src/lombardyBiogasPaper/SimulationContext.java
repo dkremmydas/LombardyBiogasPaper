@@ -5,6 +5,7 @@ import org.apache.log4j.Level;
 import repast.simphony.context.Context;
 import repast.simphony.context.DefaultContext;
 import repast.simphony.dataLoader.ContextBuilder;
+import repast.simphony.engine.environment.RunEnvironment;
 import simphony.util.messages.MessageCenter;
 
 
@@ -49,8 +50,8 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	public Context<Object> build(Context<Object> context)  {
 		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Start building SimulationContet");
 			
-		//1. set dataLoaders
-		
+		//1. Load Data
+		String dataFile = RunEnvironment.getInstance().getParameters().getString("initializationFile");
 		
 		//2. Initialize municipalities
 		
