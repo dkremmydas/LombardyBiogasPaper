@@ -1,3 +1,6 @@
-<context id="LombardyBiogasPaper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://repast.org/scenario/context">
-  	
+<context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://repast.org/scenario/context" id="SimulationContext">
+		
+		<context id="SimulationContext">
+		</context>	
+
 </context>

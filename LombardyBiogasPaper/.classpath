@@ -5,5 +5,11 @@
 	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
 	<classpathentry kind="con" path="REPAST_SIMPHONY_SUPPORT"/>
+	<classpathentry kind="lib" path="/Agroscape/lib"/>
+	<classpathentry kind="lib" path="lib/guava-18.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/LombardyBiogasPaper/lib/guava-18.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
