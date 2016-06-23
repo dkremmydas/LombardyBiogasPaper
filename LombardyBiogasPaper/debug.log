@@ -1,0 +1,2460 @@
+WARN  [AWT-EventQueue-0] 2016-06-23 11:32:57,915 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 11:32:57,915 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 11:32:57,916 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 11:32:57,916 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 11:32:57,916 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 11:32:57,916 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+DEBUG [AWT-EventQueue-0] 2016-06-23 11:33:00,292 lombardyBiogasPaper.SimulationContext - Start building SimulationContext
+DEBUG [AWT-EventQueue-0] 2016-06-23 11:33:04,219 lombardyBiogasPaper.SimulationContext - Loading from Excel fileC:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\data\\initializationDataTest.xlsx
+DEBUG [AWT-EventQueue-0] 2016-06-23 11:33:04,286 lombardyBiogasPaper.SimulationContext - Municipalities Loaded. 
+SimulationContext contains:
+SimulationContext [ Municipalities: 
+Municipality [id=19087, originalName=Salvirola Farms: [
+] ]
+Municipality [id=19081, originalName=Ripalta Cremasca Farms: [
+] ]
+Municipality [id=19097, originalName=Soncino Farms: [
+] ]
+Municipality [id=19010, originalName=Camisano Farms: [
+] ]
+Municipality [id=19035, originalName=Crema Farms: [
+] ]
+Municipality [id=19011, originalName=Campagnola Cremasca Farms: [
+] ]
+Municipality [id=19029, originalName=Chieve Farms: [
+] ]
+Municipality [id=19017, originalName=Casale Cremasco-Vidolasco Farms: [
+] ]
+Municipality [id=19086, originalName=Romanengo Farms: [
+] ]
+Municipality [id=19020, originalName=Casaletto Vaprio Farms: [
+] ]
+Municipality [id=19072, originalName=Pianengo Farms: [
+] ]
+Municipality [id=19094, originalName=Sergnano Farms: [
+] ]
+Municipality [id=19055, originalName=Madignano Farms: [
+] ]
+Municipality [id=19082, originalName=Ripalta Guerina Farms: [
+] ]
+Municipality [id=19110, originalName=Trigolo Farms: [
+] ]
+Municipality [id=19039, originalName=Cumignano sul Naviglio Farms: [
+] ]
+Municipality [id=19079, originalName=Ricengo Farms: [
+] ]
+Municipality [id=19062, originalName=Offanengo Farms: [
+] ]
+Municipality [id=19109, originalName=Trescore Cremasco Farms: [
+] ]
+Municipality [id=19054, originalName=Izano Farms: [
+] ]
+Municipality [id=19005, originalName=Bagnolo Cremasco Farms: [
+] ]
+Municipality [id=19043, originalName=Fiesco Farms: [
+] ]
+Municipality [id=19015, originalName=Capralba Farms: [
+] ]
+Municipality [id=19012, originalName=Capergnanica Farms: [
+] ]
+Municipality [id=19065, originalName=Paderno Ponchielli Farms: [
+] ]
+Municipality [id=19051, originalName=Grumello Cremonese ed Uniti Farms: [
+] ]
+Municipality [id=19098, originalName=Soresina Farms: [
+] ]
+Municipality [id=19085, originalName=Robecco d'Oglio Farms: [
+] ]
+Municipality [id=19088, originalName=San Bassano Farms: [
+] ]
+Municipality [id=19025, originalName=Castelleone Farms: [
+] ]
+Municipality [id=19063, originalName=Olmeneta Farms: [
+] ]
+Municipality [id=19007, originalName=Bordolano Farms: [
+] ]
+Municipality [id=19003, originalName=Annicco Farms: [
+] ]
+Municipality [id=19047, originalName=Genivolta Farms: [
+] ]
+Municipality [id=19013, originalName=Cappella Cantone Farms: [
+] ]
+Municipality [id=19032, originalName=Corte de' Cortesi con Cignone Farms: [
+] ]
+Municipality [id=19022, originalName=Casalmorano Farms: [
+] ]
+Municipality [id=19004, originalName=Azzanello Farms: [
+] ]
+Municipality [id=19016, originalName=Casalbuttano ed Uniti Farms: [
+] ]
+Municipality [id=19027, originalName=Castelvisconti Farms: [
+] ]
+Municipality [id=19084, originalName=Rivolta d'Adda Farms: [
+] ]
+Municipality [id=19041, originalName=Dovera Farms: [
+] ]
+Municipality [id=19067, originalName=Pandino Farms: [
+] ]
+Municipality [id=19066, originalName=Palazzo Pignano Farms: [
+] ]
+Municipality [id=19112, originalName=Vailate Farms: [
+] ]
+Municipality [id=19002, originalName=Agnadello Farms: [
+] ]
+Municipality [id=19076, originalName=Pizzighettone Farms: [
+] ]
+Municipality [id=19059, originalName=Montodine Farms: [
+] ]
+Municipality [id=19049, originalName=Gombito Farms: [
+] ]
+Municipality [id=19044, originalName=Formigara Farms: [
+] ]
+Municipality [id=19080, originalName=Ripalta Arpina Farms: [
+] ]
+Municipality [id=19060, originalName=Moscazzano Farms: [
+] ]
+Municipality [id=19034, originalName=Credera Rubbiano Farms: [
+] ]
+Municipality [id=19018, originalName=Casaletto Ceredano Farms: [
+] ]
+Municipality [id=19001, originalName=Acquanegra Cremonese Farms: [
+] ]
+Municipality [id=19038, originalName=Crotta d'Adda Farms: [
+] ]
+Municipality [id=19104, originalName=Ticengo Farms: [
+] ]
+Municipality [id=19111, originalName=Vaiano Cremasco Farms: [
+] ]
+Municipality [id=19019, originalName=Casaletto di Sopra Farms: [
+] ]
+Municipality [id=19073, originalName=Pieranica Farms: [
+] ]
+Municipality [id=19105, originalName=Torlino Vimercati Farms: [
+] ]
+Municipality [id=19033, originalName=Corte de' Frati Farms: [
+] ]
+Municipality [id=19061, originalName=Motta Baluffi Farms: [
+] ]
+Municipality [id=19031, originalName=Cingia de' Botti Farms: [
+] ]
+Municipality [id=19070, originalName=Pessina Cremonese Farms: [
+] ]
+Municipality [id=19075, originalName=Pieve San Giacomo Farms: [
+] ]
+Municipality [id=19030, originalName=Cicognolo Farms: [
+] ]
+Municipality [id=19040, originalName=Derovere Farms: [
+] ]
+Municipality [id=19008, originalName=Ca' d'Andrea Farms: [
+] ]
+Municipality [id=19113, originalName=Vescovato Farms: [
+] ]
+Municipality [id=19064, originalName=Ostiano Farms: [
+] ]
+Municipality [id=19099, originalName=Sospiro Farms: [
+] ]
+Municipality [id=19089, originalName=San Daniele Po Farms: [
+] ]
+Municipality [id=19028, originalName=Cella Dati Farms: [
+] ]
+Municipality [id=19045, originalName=Gabbioneta-Binanuova Farms: [
+] ]
+Municipality [id=19014, originalName=Cappella de' Picenardi Farms: [
+] ]
+Municipality [id=19069, originalName=Pescarolo ed Uniti Farms: [
+] ]
+Municipality [id=19115, originalName=Voltido Farms: [
+] ]
+Municipality [id=19071, originalName=Piadena Farms: [
+] ]
+Municipality [id=19021, originalName=Casalmaggiore Farms: [
+] ]
+Municipality [id=19092, originalName=Scandolara Ravara Farms: [
+] ]
+Municipality [id=19009, originalName=Calvatone Farms: [
+] ]
+Municipality [id=19091, originalName=San Martino del Lago Farms: [
+] ]
+Municipality [id=19052, originalName=Gussola Farms: [
+] ]
+Municipality [id=19108, originalName=Torricella del Pizzo Farms: [
+] ]
+Municipality [id=19096, originalName=Solarolo Rainerio Farms: [
+] ]
+Municipality [id=19042, originalName=Drizzona Farms: [
+] ]
+Municipality [id=19083, originalName=Rivarolo del Re ed Uniti Farms: [
+] ]
+Municipality [id=19106, originalName=Tornata Farms: [
+] ]
+Municipality [id=19090, originalName=San Giovanni in Croce Farms: [
+] ]
+Municipality [id=19101, originalName=Spineda Farms: [
+] ]
+Municipality [id=19100, originalName=Spinadesco Farms: [
+] ]
+Municipality [id=19107, originalName=Torre de' Picenardi Farms: [
+] ]
+Municipality [id=19046, originalName=Gadesco-Pieve Delmona Farms: [
+] ]
+Municipality [id=19026, originalName=Castelverde Farms: [
+] ]
+Municipality [id=19036, originalName=Cremona Farms: [
+] ]
+Municipality [id=19095, originalName=Sesto ed Uniti Farms: [
+] ]
+Municipality [id=19050, originalName=Grontardo Farms: [
+] ]
+Municipality [id=19048, originalName=Gerre de' Caprioli Farms: [
+] ]
+Municipality [id=19056, originalName=Malagnino Farms: [
+] ]
+Municipality [id=19077, originalName=Pozzaglio ed Uniti Farms: [
+] ]
+Municipality [id=19068, originalName=Persico Dosimo Farms: [
+] ]
+Municipality [id=19103, originalName=Stagno Lombardo Farms: [
+] ]
+Municipality [id=19074, originalName=Pieve d'Olmi Farms: [
+] ]
+Municipality [id=19093, originalName=Scandolara Ripa d'Oglio Farms: [
+] ]
+Municipality [id=19006, originalName=Bonemerse Farms: [
+] ]
+Municipality [id=19102, originalName=Spino d'Adda Farms: [
+] ]
+Municipality [id=19037, originalName=Cremosano Farms: [
+] ]
+Municipality [id=19024, originalName=Castel Gabbiano Farms: [
+] ]
+Municipality [id=19114, originalName=Volongo Farms: [
+] ]
+Municipality [id=19053, originalName=Isola Dovarese Farms: [
+] ]
+Municipality [id=19057, originalName=Martignana di Po Farms: [
+] ]
+Municipality [id=19023, originalName=Casteldidone Farms: [
+] ]
+Municipality [id=19078, originalName=Quintano Farms: [
+] ]] ]
+DEBUG [AWT-EventQueue-0] 2016-06-23 11:33:05,589 lombardyBiogasPaper.SimulationContext - Farms Loaded. 
+SimulationContext contains:
+SimulationContext [ Municipalities: 
+Municipality [id=19087, originalName=Salvirola Farms: [
+Farm [code=230, name=]
+Farm [code=1, name=]
+Farm [code=579, name=]
+Farm [code=234, name=]
+Farm [code=1571, name=]
+Farm [code=48, name=]
+] ]
+Municipality [id=19081, originalName=Ripalta Cremasca Farms: [
+Farm [code=630, name=]
+Farm [code=1359, name=]
+Farm [code=1645, name=]
+Farm [code=1474, name=]
+Farm [code=57, name=]
+Farm [code=244, name=]
+Farm [code=622, name=]
+Farm [code=73, name=]
+Farm [code=40, name=]
+Farm [code=1545, name=]
+Farm [code=226, name=]
+Farm [code=1503, name=]
+Farm [code=1573, name=]
+Farm [code=1574, name=]
+Farm [code=2, name=]
+] ]
+Municipality [id=19097, originalName=Soncino Farms: [
+Farm [code=1397, name=]
+Farm [code=612, name=]
+Farm [code=45, name=]
+Farm [code=1266, name=]
+Farm [code=633, name=]
+Farm [code=12, name=]
+Farm [code=26, name=]
+Farm [code=33, name=]
+Farm [code=227, name=]
+Farm [code=35, name=]
+Farm [code=598, name=]
+Farm [code=232, name=]
+Farm [code=591, name=]
+Farm [code=17, name=]
+Farm [code=36, name=]
+Farm [code=21, name=]
+Farm [code=56, name=]
+Farm [code=20, name=]
+Farm [code=64, name=]
+Farm [code=42, name=]
+Farm [code=62, name=]
+Farm [code=1475, name=]
+Farm [code=216, name=]
+Farm [code=19, name=]
+Farm [code=3, name=]
+Farm [code=1467, name=]
+Farm [code=599, name=]
+Farm [code=14, name=]
+Farm [code=68, name=]
+Farm [code=1646, name=]
+Farm [code=611, name=]
+Farm [code=602, name=]
+Farm [code=15, name=]
+Farm [code=8, name=]
+Farm [code=219, name=]
+Farm [code=1616, name=]
+Farm [code=623, name=]
+Farm [code=4, name=]
+Farm [code=9, name=]
+Farm [code=59, name=]
+Farm [code=1361, name=]
+] ]
+Municipality [id=19010, originalName=Camisano Farms: [
+Farm [code=49, name=]
+Farm [code=626, name=]
+Farm [code=585, name=]
+Farm [code=51, name=]
+Farm [code=605, name=]
+Farm [code=222, name=]
+Farm [code=5, name=]
+] ]
+Municipality [id=19035, originalName=Crema Farms: [
+Farm [code=22, name=]
+Farm [code=1313, name=]
+Farm [code=6, name=]
+Farm [code=619, name=]
+Farm [code=11, name=]
+Farm [code=224, name=]
+Farm [code=624, name=]
+Farm [code=220, name=]
+Farm [code=1309, name=]
+Farm [code=242, name=]
+Farm [code=1623, name=]
+Farm [code=10, name=]
+Farm [code=72, name=]
+Farm [code=625, name=]
+Farm [code=1312, name=]
+Farm [code=1544, name=]
+Farm [code=594, name=]
+Farm [code=46, name=]
+Farm [code=1476, name=]
+Farm [code=1473, name=]
+Farm [code=30, name=]
+Farm [code=217, name=]
+Farm [code=1543, name=]
+Farm [code=71, name=]
+Farm [code=69, name=]
+] ]
+Municipality [id=19011, originalName=Campagnola Cremasca Farms: [
+Farm [code=218, name=]
+Farm [code=7, name=]
+Farm [code=1402, name=]
+Farm [code=609, name=]
+] ]
+Municipality [id=19029, originalName=Chieve Farms: [
+Farm [code=597, name=]
+Farm [code=629, name=]
+Farm [code=13, name=]
+Farm [code=1203, name=]
+Farm [code=1504, name=]
+Farm [code=621, name=]
+] ]
+Municipality [id=19017, originalName=Casale Cremasco-Vidolasco Farms: [
+Farm [code=37, name=]
+Farm [code=16, name=]
+] ]
+Municipality [id=19086, originalName=Romanengo Farms: [
+Farm [code=18, name=]
+Farm [code=589, name=]
+Farm [code=63, name=]
+Farm [code=43, name=]
+Farm [code=617, name=]
+Farm [code=596, name=]
+Farm [code=616, name=]
+Farm [code=237, name=]
+Farm [code=620, name=]
+Farm [code=31, name=]
+Farm [code=631, name=]
+Farm [code=74, name=]
+Farm [code=1572, name=]
+] ]
+Municipality [id=19020, originalName=Casaletto Vaprio Farms: [
+Farm [code=593, name=]
+Farm [code=23, name=]
+] ]
+Municipality [id=19072, originalName=Pianengo Farms: [
+Farm [code=1472, name=]
+Farm [code=236, name=]
+Farm [code=1505, name=]
+Farm [code=1271, name=]
+Farm [code=586, name=]
+Farm [code=24, name=]
+] ]
+Municipality [id=19094, originalName=Sergnano Farms: [
+Farm [code=1648, name=]
+Farm [code=1647, name=]
+Farm [code=600, name=]
+Farm [code=610, name=]
+Farm [code=1538, name=]
+Farm [code=1401, name=]
+Farm [code=25, name=]
+] ]
+Municipality [id=19055, originalName=Madignano Farms: [
+Farm [code=606, name=]
+Farm [code=225, name=]
+Farm [code=1622, name=]
+Farm [code=317, name=]
+Farm [code=1360, name=]
+Farm [code=54, name=]
+Farm [code=27, name=]
+Farm [code=1270, name=]
+Farm [code=627, name=]
+Farm [code=53, name=]
+Farm [code=1204, name=]
+] ]
+Municipality [id=19082, originalName=Ripalta Guerina Farms: [
+Farm [code=1502, name=]
+Farm [code=28, name=]
+Farm [code=588, name=]
+] ]
+Municipality [id=19110, originalName=Trigolo Farms: [
+Farm [code=34, name=]
+Farm [code=316, name=]
+Farm [code=1230, name=]
+Farm [code=41, name=]
+Farm [code=1227, name=]
+Farm [code=29, name=]
+Farm [code=315, name=]
+Farm [code=228, name=]
+Farm [code=587, name=]
+Farm [code=221, name=]
+Farm [code=1620, name=]
+Farm [code=239, name=]
+Farm [code=1291, name=]
+Farm [code=240, name=]
+Farm [code=238, name=]
+] ]
+Municipality [id=19039, originalName=Cumignano sul Naviglio Farms: [
+Farm [code=607, name=]
+Farm [code=235, name=]
+Farm [code=32, name=]
+Farm [code=313, name=]
+Farm [code=61, name=]
+] ]
+Municipality [id=19079, originalName=Ricengo Farms: [
+Farm [code=38, name=]
+Farm [code=246, name=]
+Farm [code=618, name=]
+Farm [code=70, name=]
+] ]
+Municipality [id=19062, originalName=Offanengo Farms: [
+Farm [code=590, name=]
+Farm [code=60, name=]
+Farm [code=50, name=]
+Farm [code=39, name=]
+Farm [code=581, name=]
+Farm [code=1433, name=]
+Farm [code=1404, name=]
+Farm [code=632, name=]
+Farm [code=608, name=]
+] ]
+Municipality [id=19109, originalName=Trescore Cremasco Farms: [
+Farm [code=1202, name=]
+Farm [code=55, name=]
+Farm [code=1477, name=]
+Farm [code=582, name=]
+Farm [code=44, name=]
+Farm [code=1200, name=]
+] ]
+Municipality [id=19054, originalName=Izano Farms: [
+Farm [code=52, name=]
+Farm [code=614, name=]
+Farm [code=47, name=]
+Farm [code=595, name=]
+Farm [code=583, name=]
+Farm [code=66, name=]
+Farm [code=628, name=]
+] ]
+Municipality [id=19005, originalName=Bagnolo Cremasco Farms: [
+Farm [code=58, name=]
+Farm [code=1570, name=]
+Farm [code=1649, name=]
+Farm [code=1434, name=]
+] ]
+Municipality [id=19043, originalName=Fiesco Farms: [
+Farm [code=603, name=]
+Farm [code=314, name=]
+Farm [code=601, name=]
+Farm [code=65, name=]
+Farm [code=75, name=]
+Farm [code=233, name=]
+] ]
+Municipality [id=19015, originalName=Capralba Farms: [
+Farm [code=67, name=]
+Farm [code=1432, name=]
+] ]
+Municipality [id=19012, originalName=Capergnanica Farms: [
+Farm [code=584, name=]
+Farm [code=1624, name=]
+Farm [code=76, name=]
+Farm [code=1430, name=]
+Farm [code=1615, name=]
+Farm [code=1403, name=]
+Farm [code=1232, name=]
+] ]
+Municipality [id=19065, originalName=Paderno Ponchielli Farms: [
+Farm [code=1336, name=]
+Farm [code=708, name=]
+Farm [code=77, name=]
+Farm [code=1208, name=]
+Farm [code=266, name=]
+Farm [code=703, name=]
+Farm [code=148, name=]
+Farm [code=100, name=]
+Farm [code=682, name=]
+Farm [code=277, name=]
+Farm [code=275, name=]
+Farm [code=306, name=]
+Farm [code=135, name=]
+Farm [code=674, name=]
+Farm [code=141, name=]
+Farm [code=667, name=]
+] ]
+Municipality [id=19051, originalName=Grumello Cremonese ed Uniti Farms: [
+Farm [code=110, name=]
+Farm [code=260, name=]
+Farm [code=138, name=]
+Farm [code=686, name=]
+Farm [code=271, name=]
+Farm [code=140, name=]
+Farm [code=123, name=]
+Farm [code=1408, name=]
+Farm [code=334, name=]
+Farm [code=694, name=]
+Farm [code=151, name=]
+Farm [code=300, name=]
+Farm [code=83, name=]
+Farm [code=152, name=]
+Farm [code=308, name=]
+Farm [code=325, name=]
+Farm [code=322, name=]
+Farm [code=1480, name=]
+Farm [code=78, name=]
+Farm [code=706, name=]
+Farm [code=137, name=]
+Farm [code=134, name=]
+Farm [code=257, name=]
+Farm [code=1577, name=]
+Farm [code=721, name=]
+Farm [code=714, name=]
+Farm [code=668, name=]
+Farm [code=710, name=]
+Farm [code=128, name=]
+Farm [code=118, name=]
+] ]
+Municipality [id=19098, originalName=Soresina Farms: [
+Farm [code=695, name=]
+Farm [code=333, name=]
+Farm [code=156, name=]
+Farm [code=91, name=]
+Farm [code=150, name=]
+Farm [code=153, name=]
+Farm [code=79, name=]
+Farm [code=87, name=]
+Farm [code=1314, name=]
+Farm [code=256, name=]
+Farm [code=669, name=]
+Farm [code=101, name=]
+Farm [code=280, name=]
+Farm [code=143, name=]
+Farm [code=329, name=]
+Farm [code=285, name=]
+Farm [code=272, name=]
+Farm [code=146, name=]
+Farm [code=1409, name=]
+Farm [code=263, name=]
+Farm [code=89, name=]
+Farm [code=712, name=]
+] ]
+Municipality [id=19085, originalName=Robecco d'Oglio Farms: [
+Farm [code=675, name=]
+Farm [code=80, name=]
+Farm [code=697, name=]
+Farm [code=691, name=]
+Farm [code=131, name=]
+Farm [code=715, name=]
+Farm [code=127, name=]
+Farm [code=1576, name=]
+Farm [code=82, name=]
+Farm [code=666, name=]
+Farm [code=1436, name=]
+Farm [code=103, name=]
+Farm [code=81, name=]
+Farm [code=133, name=]
+Farm [code=132, name=]
+Farm [code=116, name=]
+Farm [code=267, name=]
+] ]
+Municipality [id=19088, originalName=San Bassano Farms: [
+Farm [code=84, name=]
+Farm [code=95, name=]
+Farm [code=158, name=]
+Farm [code=663, name=]
+Farm [code=664, name=]
+Farm [code=279, name=]
+Farm [code=687, name=]
+Farm [code=108, name=]
+Farm [code=659, name=]
+Farm [code=665, name=]
+Farm [code=122, name=]
+Farm [code=698, name=]
+Farm [code=677, name=]
+Farm [code=86, name=]
+Farm [code=690, name=]
+Farm [code=107, name=]
+Farm [code=119, name=]
+Farm [code=692, name=]
+] ]
+Municipality [id=19025, originalName=Castelleone Farms: [
+Farm [code=115, name=]
+Farm [code=719, name=]
+Farm [code=676, name=]
+Farm [code=248, name=]
+Farm [code=696, name=]
+Farm [code=672, name=]
+Farm [code=109, name=]
+Farm [code=693, name=]
+Farm [code=311, name=]
+Farm [code=1236, name=]
+Farm [code=660, name=]
+Farm [code=310, name=]
+Farm [code=303, name=]
+Farm [code=304, name=]
+Farm [code=1381, name=]
+Farm [code=268, name=]
+Farm [code=274, name=]
+Farm [code=112, name=]
+Farm [code=97, name=]
+Farm [code=105, name=]
+Farm [code=149, name=]
+Farm [code=261, name=]
+Farm [code=247, name=]
+Farm [code=85, name=]
+Farm [code=145, name=]
+Farm [code=142, name=]
+Farm [code=258, name=]
+Farm [code=295, name=]
+Farm [code=299, name=]
+Farm [code=704, name=]
+Farm [code=700, name=]
+Farm [code=302, name=]
+Farm [code=106, name=]
+Farm [code=120, name=]
+] ]
+Municipality [id=19063, originalName=Olmeneta Farms: [
+Farm [code=1272, name=]
+Farm [code=318, name=]
+Farm [code=702, name=]
+Farm [code=265, name=]
+Farm [code=129, name=]
+Farm [code=1235, name=]
+Farm [code=1627, name=]
+Farm [code=309, name=]
+Farm [code=1437, name=]
+Farm [code=711, name=]
+Farm [code=326, name=]
+Farm [code=88, name=]
+] ]
+Municipality [id=19007, originalName=Bordolano Farms: [
+Farm [code=293, name=]
+Farm [code=685, name=]
+Farm [code=90, name=]
+Farm [code=254, name=]
+Farm [code=713, name=]
+Farm [code=680, name=]
+Farm [code=98, name=]
+] ]
+Municipality [id=19003, originalName=Annicco Farms: [
+Farm [code=102, name=]
+Farm [code=722, name=]
+Farm [code=297, name=]
+Farm [code=144, name=]
+Farm [code=286, name=]
+Farm [code=327, name=]
+Farm [code=661, name=]
+Farm [code=252, name=]
+Farm [code=689, name=]
+Farm [code=130, name=]
+Farm [code=328, name=]
+Farm [code=301, name=]
+Farm [code=259, name=]
+Farm [code=1335, name=]
+Farm [code=1578, name=]
+Farm [code=276, name=]
+Farm [code=688, name=]
+Farm [code=92, name=]
+Farm [code=699, name=]
+Farm [code=673, name=]
+Farm [code=1292, name=]
+Farm [code=707, name=]
+Farm [code=705, name=]
+Farm [code=319, name=]
+Farm [code=253, name=]
+Farm [code=126, name=]
+] ]
+Municipality [id=19047, originalName=Genivolta Farms: [
+Farm [code=1508, name=]
+Farm [code=720, name=]
+Farm [code=282, name=]
+Farm [code=716, name=]
+Farm [code=121, name=]
+Farm [code=154, name=]
+Farm [code=93, name=]
+Farm [code=281, name=]
+Farm [code=1550, name=]
+Farm [code=1362, name=]
+] ]
+Municipality [id=19013, originalName=Cappella Cantone Farms: [
+Farm [code=1653, name=]
+Farm [code=307, name=]
+Farm [code=251, name=]
+Farm [code=278, name=]
+Farm [code=709, name=]
+Farm [code=250, name=]
+Farm [code=94, name=]
+Farm [code=330, name=]
+] ]
+Municipality [id=19032, originalName=Corte de' Cortesi con Cignone Farms: [
+Farm [code=305, name=]
+Farm [code=113, name=]
+Farm [code=662, name=]
+Farm [code=701, name=]
+Farm [code=117, name=]
+Farm [code=96, name=]
+Farm [code=264, name=]
+Farm [code=320, name=]
+Farm [code=671, name=]
+Farm [code=321, name=]
+Farm [code=718, name=]
+Farm [code=114, name=]
+Farm [code=323, name=]
+Farm [code=296, name=]
+] ]
+Municipality [id=19022, originalName=Casalmorano Farms: [
+Farm [code=104, name=]
+Farm [code=262, name=]
+Farm [code=249, name=]
+Farm [code=681, name=]
+Farm [code=1651, name=]
+Farm [code=292, name=]
+Farm [code=717, name=]
+Farm [code=684, name=]
+Farm [code=670, name=]
+Farm [code=255, name=]
+Farm [code=125, name=]
+Farm [code=155, name=]
+Farm [code=683, name=]
+Farm [code=99, name=]
+Farm [code=283, name=]
+Farm [code=289, name=]
+] ]
+Municipality [id=19004, originalName=Azzanello Farms: [
+Farm [code=287, name=]
+Farm [code=1507, name=]
+Farm [code=269, name=]
+Farm [code=111, name=]
+Farm [code=294, name=]
+Farm [code=679, name=]
+] ]
+Municipality [id=19016, originalName=Casalbuttano ed Uniti Farms: [
+Farm [code=288, name=]
+Farm [code=298, name=]
+Farm [code=284, name=]
+Farm [code=147, name=]
+Farm [code=1234, name=]
+Farm [code=331, name=]
+Farm [code=324, name=]
+Farm [code=332, name=]
+Farm [code=678, name=]
+Farm [code=157, name=]
+Farm [code=291, name=]
+Farm [code=1293, name=]
+Farm [code=273, name=]
+Farm [code=124, name=]
+Farm [code=426, name=]
+Farm [code=139, name=]
+] ]
+Municipality [id=19027, originalName=Castelvisconti Farms: [
+Farm [code=290, name=]
+Farm [code=1652, name=]
+Farm [code=136, name=]
+Farm [code=270, name=]
+] ]
+Municipality [id=19084, originalName=Rivolta d'Adda Farms: [
+Farm [code=1541, name=]
+Farm [code=1196, name=]
+Farm [code=1226, name=]
+Farm [code=574, name=]
+Farm [code=1617, name=]
+Farm [code=575, name=]
+Farm [code=161, name=]
+Farm [code=1539, name=]
+Farm [code=1426, name=]
+Farm [code=1469, name=]
+Farm [code=1470, name=]
+Farm [code=159, name=]
+Farm [code=170, name=]
+Farm [code=1498, name=]
+Farm [code=160, name=]
+Farm [code=1644, name=]
+Farm [code=1500, name=]
+Farm [code=1399, name=]
+] ]
+Municipality [id=19041, originalName=Dovera Farms: [
+Farm [code=1643, name=]
+Farm [code=1428, name=]
+Farm [code=168, name=]
+Farm [code=1471, name=]
+Farm [code=1427, name=]
+Farm [code=1311, name=]
+Farm [code=445, name=]
+Farm [code=1568, name=]
+Farm [code=429, name=]
+Farm [code=164, name=]
+Farm [code=1224, name=]
+Farm [code=162, name=]
+] ]
+Municipality [id=19067, originalName=Pandino Farms: [
+Farm [code=165, name=]
+Farm [code=1569, name=]
+Farm [code=569, name=]
+Farm [code=571, name=]
+Farm [code=1198, name=]
+Farm [code=163, name=]
+Farm [code=431, name=]
+] ]
+Municipality [id=19066, originalName=Palazzo Pignano Farms: [
+Farm [code=446, name=]
+Farm [code=1540, name=]
+Farm [code=1400, name=]
+Farm [code=166, name=]
+] ]
+Municipality [id=19112, originalName=Vailate Farms: [
+Farm [code=167, name=]
+Farm [code=577, name=]
+Farm [code=570, name=]
+] ]
+Municipality [id=19002, originalName=Agnadello Farms: [
+Farm [code=1618, name=]
+Farm [code=1619, name=]
+Farm [code=572, name=]
+Farm [code=169, name=]
+Farm [code=1225, name=]
+Farm [code=430, name=]
+] ]
+Municipality [id=19076, originalName=Pizzighettone Farms: [
+Farm [code=637, name=]
+Farm [code=435, name=]
+Farm [code=187, name=]
+Farm [code=644, name=]
+Farm [code=649, name=]
+Farm [code=639, name=]
+Farm [code=180, name=]
+Farm [code=646, name=]
+Farm [code=449, name=]
+Farm [code=1506, name=]
+Farm [code=657, name=]
+Farm [code=172, name=]
+Farm [code=200, name=]
+Farm [code=211, name=]
+Farm [code=1479, name=]
+Farm [code=434, name=]
+Farm [code=208, name=]
+Farm [code=652, name=]
+Farm [code=638, name=]
+Farm [code=199, name=]
+Farm [code=171, name=]
+Farm [code=174, name=]
+Farm [code=193, name=]
+Farm [code=636, name=]
+] ]
+Municipality [id=19059, originalName=Montodine Farms: [
+Farm [code=651, name=]
+Farm [code=204, name=]
+Farm [code=184, name=]
+Farm [code=440, name=]
+Farm [code=185, name=]
+Farm [code=177, name=]
+Farm [code=173, name=]
+Farm [code=650, name=]
+Farm [code=643, name=]
+Farm [code=641, name=]
+Farm [code=213, name=]
+Farm [code=182, name=]
+] ]
+Municipality [id=19049, originalName=Gombito Farms: [
+Farm [code=215, name=]
+Farm [code=1380, name=]
+Farm [code=437, name=]
+Farm [code=205, name=]
+Farm [code=642, name=]
+Farm [code=197, name=]
+Farm [code=1301, name=]
+Farm [code=175, name=]
+] ]
+Municipality [id=19044, originalName=Formigara Farms: [
+Farm [code=450, name=]
+Farm [code=176, name=]
+Farm [code=209, name=]
+Farm [code=192, name=]
+Farm [code=202, name=]
+Farm [code=441, name=]
+Farm [code=207, name=]
+Farm [code=1334, name=]
+Farm [code=214, name=]
+Farm [code=655, name=]
+Farm [code=196, name=]
+Farm [code=194, name=]
+Farm [code=634, name=]
+Farm [code=195, name=]
+] ]
+Municipality [id=19080, originalName=Ripalta Arpina Farms: [
+Farm [code=178, name=]
+Farm [code=210, name=]
+Farm [code=647, name=]
+Farm [code=183, name=]
+Farm [code=640, name=]
+Farm [code=1478, name=]
+Farm [code=433, name=]
+Farm [code=656, name=]
+] ]
+Municipality [id=19060, originalName=Moscazzano Farms: [
+Farm [code=179, name=]
+Farm [code=648, name=]
+Farm [code=1575, name=]
+Farm [code=186, name=]
+Farm [code=181, name=]
+Farm [code=444, name=]
+] ]
+Municipality [id=19034, originalName=Credera Rubbiano Farms: [
+Farm [code=658, name=]
+Farm [code=436, name=]
+Farm [code=191, name=]
+Farm [code=1205, name=]
+Farm [code=1407, name=]
+Farm [code=188, name=]
+Farm [code=439, name=]
+Farm [code=1650, name=]
+Farm [code=635, name=]
+Farm [code=1625, name=]
+Farm [code=442, name=]
+] ]
+Municipality [id=19018, originalName=Casaletto Ceredano Farms: [
+Farm [code=1626, name=]
+Farm [code=645, name=]
+Farm [code=190, name=]
+Farm [code=198, name=]
+Farm [code=1549, name=]
+Farm [code=1206, name=]
+Farm [code=1548, name=]
+Farm [code=189, name=]
+Farm [code=653, name=]
+Farm [code=1207, name=]
+Farm [code=1233, name=]
+] ]
+Municipality [id=19001, originalName=Acquanegra Cremonese Farms: [
+Farm [code=201, name=]
+Farm [code=1435, name=]
+Farm [code=654, name=]
+Farm [code=212, name=]
+Farm [code=448, name=]
+] ]
+Municipality [id=19038, originalName=Crotta d'Adda Farms: [
+Farm [code=1406, name=]
+Farm [code=443, name=]
+Farm [code=438, name=]
+Farm [code=206, name=]
+Farm [code=432, name=]
+Farm [code=203, name=]
+Farm [code=447, name=]
+] ]
+Municipality [id=19104, originalName=Ticengo Farms: [
+Farm [code=425, name=]
+Farm [code=223, name=]
+Farm [code=231, name=]
+] ]
+Municipality [id=19111, originalName=Vaiano Cremasco Farms: [
+Farm [code=229, name=]
+Farm [code=1231, name=]
+Farm [code=1229, name=]
+Farm [code=1431, name=]
+] ]
+Municipality [id=19019, originalName=Casaletto di Sopra Farms: [
+Farm [code=613, name=]
+Farm [code=424, name=]
+Farm [code=241, name=]
+] ]
+Municipality [id=19073, originalName=Pieranica Farms: [
+Farm [code=243, name=]
+Farm [code=1405, name=]
+] ]
+Municipality [id=19105, originalName=Torlino Vimercati Farms: [
+Farm [code=1547, name=]
+Farm [code=1429, name=]
+Farm [code=245, name=]
+] ]
+Municipality [id=19033, originalName=Corte de' Frati Farms: [
+Farm [code=568, name=]
+Farm [code=1438, name=]
+Farm [code=1441, name=]
+Farm [code=943, name=]
+Farm [code=989, name=]
+Farm [code=920, name=]
+Farm [code=1628, name=]
+Farm [code=1239, name=]
+Farm [code=1382, name=]
+Farm [code=1439, name=]
+Farm [code=977, name=]
+Farm [code=487, name=]
+Farm [code=1511, name=]
+Farm [code=922, name=]
+Farm [code=986, name=]
+Farm [code=544, name=]
+Farm [code=312, name=]
+] ]
+Municipality [id=19061, originalName=Motta Baluffi Farms: [
+Farm [code=995, name=]
+Farm [code=1513, name=]
+Farm [code=1390, name=]
+Farm [code=1024, name=]
+Farm [code=360, name=]
+Farm [code=753, name=]
+Farm [code=1304, name=]
+Farm [code=358, name=]
+Farm [code=335, name=]
+Farm [code=353, name=]
+Farm [code=1256, name=]
+Farm [code=462, name=]
+Farm [code=794, name=]
+Farm [code=371, name=]
+Farm [code=1053, name=]
+Farm [code=1028, name=]
+Farm [code=1276, name=]
+Farm [code=352, name=]
+Farm [code=354, name=]
+Farm [code=470, name=]
+Farm [code=1660, name=]
+Farm [code=808, name=]
+Farm [code=777, name=]
+] ]
+Municipality [id=19031, originalName=Cingia de' Botti Farms: [
+Farm [code=1515, name=]
+Farm [code=1065, name=]
+Farm [code=364, name=]
+Farm [code=1060, name=]
+Farm [code=1032, name=]
+Farm [code=1632, name=]
+Farm [code=1486, name=]
+Farm [code=1188, name=]
+Farm [code=1009, name=]
+Farm [code=1484, name=]
+Farm [code=1082, name=]
+Farm [code=1587, name=]
+Farm [code=767, name=]
+Farm [code=336, name=]
+Farm [code=1037, name=]
+] ]
+Municipality [id=19070, originalName=Pessina Cremonese Farms: [
+Farm [code=1069, name=]
+Farm [code=1078, name=]
+Farm [code=464, name=]
+Farm [code=1384, name=]
+Farm [code=1067, name=]
+Farm [code=337, name=]
+Farm [code=1007, name=]
+Farm [code=800, name=]
+Farm [code=805, name=]
+Farm [code=1582, name=]
+Farm [code=816, name=]
+Farm [code=476, name=]
+Farm [code=789, name=]
+] ]
+Municipality [id=19075, originalName=Pieve San Giacomo Farms: [
+Farm [code=338, name=]
+Farm [code=1085, name=]
+Farm [code=1295, name=]
+Farm [code=1243, name=]
+Farm [code=346, name=]
+Farm [code=759, name=]
+Farm [code=359, name=]
+Farm [code=1275, name=]
+Farm [code=1039, name=]
+] ]
+Municipality [id=19030, originalName=Cicognolo Farms: [
+Farm [code=1096, name=]
+Farm [code=1036, name=]
+Farm [code=455, name=]
+Farm [code=370, name=]
+Farm [code=339, name=]
+Farm [code=1087, name=]
+Farm [code=463, name=]
+Farm [code=1048, name=]
+] ]
+Municipality [id=19040, originalName=Derovere Farms: [
+Farm [code=1584, name=]
+Farm [code=1030, name=]
+Farm [code=469, name=]
+Farm [code=1023, name=]
+Farm [code=1021, name=]
+Farm [code=347, name=]
+Farm [code=1016, name=]
+Farm [code=1586, name=]
+Farm [code=1213, name=]
+Farm [code=480, name=]
+Farm [code=1445, name=]
+Farm [code=340, name=]
+Farm [code=474, name=]
+Farm [code=760, name=]
+Farm [code=1240, name=]
+Farm [code=1043, name=]
+Farm [code=1091, name=]
+Farm [code=1017, name=]
+Farm [code=1077, name=]
+] ]
+Municipality [id=19008, originalName=Ca' d'Andrea Farms: [
+Farm [code=1064, name=]
+Farm [code=790, name=]
+Farm [code=1195, name=]
+Farm [code=459, name=]
+Farm [code=1443, name=]
+Farm [code=1002, name=]
+Farm [code=1049, name=]
+Farm [code=1018, name=]
+Farm [code=1079, name=]
+Farm [code=1368, name=]
+Farm [code=365, name=]
+Farm [code=1296, name=]
+Farm [code=1076, name=]
+Farm [code=1278, name=]
+Farm [code=1050, name=]
+Farm [code=1088, name=]
+Farm [code=341, name=]
+Farm [code=1054, name=]
+Farm [code=1063, name=]
+Farm [code=361, name=]
+Farm [code=792, name=]
+Farm [code=1044, name=]
+] ]
+Municipality [id=19113, originalName=Vescovato Farms: [
+Farm [code=1345, name=]
+Farm [code=998, name=]
+Farm [code=1086, name=]
+Farm [code=342, name=]
+Farm [code=1041, name=]
+Farm [code=1006, name=]
+Farm [code=1059, name=]
+Farm [code=482, name=]
+Farm [code=993, name=]
+Farm [code=460, name=]
+Farm [code=1094, name=]
+] ]
+Municipality [id=19064, originalName=Ostiano Farms: [
+Farm [code=774, name=]
+Farm [code=1003, name=]
+Farm [code=754, name=]
+Farm [code=1019, name=]
+Farm [code=798, name=]
+Farm [code=809, name=]
+Farm [code=363, name=]
+Farm [code=812, name=]
+Farm [code=368, name=]
+Farm [code=788, name=]
+Farm [code=797, name=]
+Farm [code=1090, name=]
+Farm [code=481, name=]
+Farm [code=466, name=]
+Farm [code=1089, name=]
+Farm [code=1631, name=]
+Farm [code=1075, name=]
+Farm [code=784, name=]
+Farm [code=343, name=]
+Farm [code=757, name=]
+Farm [code=472, name=]
+Farm [code=813, name=]
+Farm [code=1212, name=]
+Farm [code=1656, name=]
+Farm [code=761, name=]
+Farm [code=803, name=]
+Farm [code=1555, name=]
+] ]
+Municipality [id=19099, originalName=Sospiro Farms: [
+Farm [code=367, name=]
+Farm [code=783, name=]
+Farm [code=1241, name=]
+Farm [code=475, name=]
+Farm [code=1011, name=]
+Farm [code=766, name=]
+Farm [code=1004, name=]
+Farm [code=344, name=]
+Farm [code=467, name=]
+Farm [code=473, name=]
+Farm [code=477, name=]
+Farm [code=1038, name=]
+Farm [code=1062, name=]
+Farm [code=468, name=]
+Farm [code=791, name=]
+Farm [code=1056, name=]
+Farm [code=1093, name=]
+Farm [code=1092, name=]
+Farm [code=1081, name=]
+Farm [code=1316, name=]
+Farm [code=1659, name=]
+Farm [code=356, name=]
+Farm [code=1095, name=]
+] ]
+Municipality [id=19089, originalName=San Daniele Po Farms: [
+Farm [code=1446, name=]
+Farm [code=804, name=]
+Farm [code=1319, name=]
+Farm [code=1277, name=]
+Farm [code=1444, name=]
+Farm [code=1318, name=]
+Farm [code=1303, name=]
+Farm [code=1071, name=]
+Farm [code=1556, name=]
+Farm [code=799, name=]
+Farm [code=1414, name=]
+Farm [code=1350, name=]
+Farm [code=1257, name=]
+Farm [code=997, name=]
+Farm [code=793, name=]
+Farm [code=780, name=]
+Farm [code=345, name=]
+Farm [code=1012, name=]
+Farm [code=1020, name=]
+Farm [code=1046, name=]
+] ]
+Municipality [id=19028, originalName=Cella Dati Farms: [
+Farm [code=369, name=]
+Farm [code=484, name=]
+Farm [code=1010, name=]
+Farm [code=1025, name=]
+Farm [code=1512, name=]
+Farm [code=348, name=]
+Farm [code=454, name=]
+Farm [code=1051, name=]
+Farm [code=1299, name=]
+Farm [code=485, name=]
+Farm [code=772, name=]
+Farm [code=1583, name=]
+Farm [code=1055, name=]
+Farm [code=1657, name=]
+Farm [code=1005, name=]
+Farm [code=1027, name=]
+Farm [code=350, name=]
+Farm [code=1339, name=]
+Farm [code=452, name=]
+Farm [code=755, name=]
+] ]
+Municipality [id=19045, originalName=Gabbioneta-Binanuova Farms: [
+Farm [code=349, name=]
+Farm [code=451, name=]
+Farm [code=1029, name=]
+Farm [code=807, name=]
+Farm [code=1031, name=]
+Farm [code=1013, name=]
+Farm [code=779, name=]
+Farm [code=782, name=]
+Farm [code=1035, name=]
+Farm [code=461, name=]
+Farm [code=786, name=]
+Farm [code=776, name=]
+Farm [code=771, name=]
+Farm [code=814, name=]
+Farm [code=758, name=]
+Farm [code=775, name=]
+Farm [code=1080, name=]
+Farm [code=815, name=]
+Farm [code=787, name=]
+Farm [code=802, name=]
+Farm [code=770, name=]
+Farm [code=1072, name=]
+] ]
+Municipality [id=19014, originalName=Cappella de' Picenardi Farms: [
+Farm [code=992, name=]
+Farm [code=756, name=]
+Farm [code=1015, name=]
+Farm [code=456, name=]
+Farm [code=357, name=]
+Farm [code=1052, name=]
+Farm [code=1265, name=]
+Farm [code=458, name=]
+Farm [code=1008, name=]
+Farm [code=1074, name=]
+Farm [code=366, name=]
+Farm [code=773, name=]
+Farm [code=362, name=]
+Farm [code=1338, name=]
+Farm [code=1485, name=]
+Farm [code=1022, name=]
+Farm [code=1516, name=]
+Farm [code=351, name=]
+Farm [code=1070, name=]
+Farm [code=811, name=]
+Farm [code=1554, name=]
+Farm [code=768, name=]
+Farm [code=1367, name=]
+Farm [code=810, name=]
+Farm [code=769, name=]
+Farm [code=1606, name=]
+] ]
+Municipality [id=19069, originalName=Pescarolo ed Uniti Farms: [
+Farm [code=1040, name=]
+Farm [code=1073, name=]
+Farm [code=795, name=]
+Farm [code=996, name=]
+Farm [code=1001, name=]
+Farm [code=781, name=]
+Farm [code=1047, name=]
+Farm [code=457, name=]
+Farm [code=1000, name=]
+Farm [code=999, name=]
+Farm [code=1097, name=]
+Farm [code=994, name=]
+Farm [code=796, name=]
+Farm [code=1346, name=]
+Farm [code=355, name=]
+Farm [code=478, name=]
+Farm [code=1413, name=]
+Farm [code=1340, name=]
+Farm [code=483, name=]
+Farm [code=465, name=]
+Farm [code=1317, name=]
+Farm [code=762, name=]
+Farm [code=1058, name=]
+Farm [code=1068, name=]
+Farm [code=763, name=]
+Farm [code=1045, name=]
+] ]
+Municipality [id=19115, originalName=Voltido Farms: [
+Farm [code=1349, name=]
+Farm [code=1174, name=]
+Farm [code=1561, name=]
+Farm [code=408, name=]
+Farm [code=383, name=]
+Farm [code=1330, name=]
+Farm [code=1254, name=]
+Farm [code=1139, name=]
+Farm [code=1164, name=]
+Farm [code=372, name=]
+Farm [code=389, name=]
+Farm [code=1641, name=]
+Farm [code=397, name=]
+Farm [code=875, name=]
+Farm [code=1374, name=]
+Farm [code=1162, name=]
+Farm [code=1148, name=]
+Farm [code=409, name=]
+Farm [code=882, name=]
+Farm [code=897, name=]
+Farm [code=420, name=]
+] ]
+Municipality [id=19071, originalName=Piadena Farms: [
+Farm [code=375, name=]
+Farm [code=1149, name=]
+Farm [code=1290, name=]
+Farm [code=1132, name=]
+Farm [code=386, name=]
+Farm [code=407, name=]
+Farm [code=415, name=]
+Farm [code=373, name=]
+Farm [code=391, name=]
+Farm [code=1282, name=]
+Farm [code=1322, name=]
+Farm [code=1252, name=]
+Farm [code=1667, name=]
+Farm [code=1118, name=]
+Farm [code=1168, name=]
+Farm [code=1176, name=]
+Farm [code=1245, name=]
+Farm [code=898, name=]
+Farm [code=1104, name=]
+] ]
+Municipality [id=19021, originalName=Casalmaggiore Farms: [
+Farm [code=909, name=]
+Farm [code=1262, name=]
+Farm [code=1354, name=]
+Farm [code=894, name=]
+Farm [code=824, name=]
+Farm [code=401, name=]
+Farm [code=853, name=]
+Farm [code=860, name=]
+Farm [code=1101, name=]
+Farm [code=1669, name=]
+Farm [code=1458, name=]
+Farm [code=1180, name=]
+Farm [code=912, name=]
+Farm [code=1280, name=]
+Farm [code=1420, name=]
+Farm [code=838, name=]
+Farm [code=1523, name=]
+Farm [code=1425, name=]
+Farm [code=856, name=]
+Farm [code=1565, name=]
+Farm [code=1141, name=]
+Farm [code=880, name=]
+Farm [code=1491, name=]
+Farm [code=1590, name=]
+Farm [code=851, name=]
+Farm [code=1525, name=]
+Farm [code=1321, name=]
+Farm [code=1387, name=]
+Farm [code=394, name=]
+Farm [code=1517, name=]
+Farm [code=1566, name=]
+Farm [code=1259, name=]
+Farm [code=1596, name=]
+Farm [code=1422, name=]
+Farm [code=842, name=]
+Farm [code=1388, name=]
+Farm [code=384, name=]
+Farm [code=1528, name=]
+Farm [code=1638, name=]
+Farm [code=1457, name=]
+Farm [code=1612, name=]
+Farm [code=1529, name=]
+Farm [code=913, name=]
+Farm [code=1378, name=]
+Farm [code=1463, name=]
+Farm [code=1126, name=]
+Farm [code=1454, name=]
+Farm [code=1531, name=]
+Farm [code=1386, name=]
+Farm [code=893, name=]
+Farm [code=1127, name=]
+Farm [code=1447, name=]
+Farm [code=417, name=]
+Farm [code=1609, name=]
+Farm [code=1453, name=]
+Farm [code=1283, name=]
+Farm [code=411, name=]
+Farm [code=1251, name=]
+Farm [code=1219, name=]
+Farm [code=1353, name=]
+Farm [code=1557, name=]
+Farm [code=1385, name=]
+Farm [code=1639, name=]
+Farm [code=1255, name=]
+Farm [code=1468, name=]
+Farm [code=388, name=]
+Farm [code=1163, name=]
+Farm [code=1419, name=]
+Farm [code=1192, name=]
+Farm [code=841, name=]
+Farm [code=1253, name=]
+Farm [code=1537, name=]
+Farm [code=1533, name=]
+Farm [code=1532, name=]
+Farm [code=1343, name=]
+Farm [code=834, name=]
+Farm [code=374, name=]
+Farm [code=1459, name=]
+Farm [code=1249, name=]
+Farm [code=1167, name=]
+Farm [code=1456, name=]
+Farm [code=1558, name=]
+Farm [code=1136, name=]
+Farm [code=1396, name=]
+Farm [code=1490, name=]
+Farm [code=915, name=]
+Farm [code=865, name=]
+Farm [code=1634, name=]
+Farm [code=892, name=]
+Farm [code=1391, name=]
+Farm [code=914, name=]
+Farm [code=1329, name=]
+Farm [code=1173, name=]
+Farm [code=866, name=]
+Farm [code=1105, name=]
+Farm [code=1289, name=]
+Farm [code=376, name=]
+Farm [code=402, name=]
+Farm [code=1494, name=]
+Farm [code=393, name=]
+Farm [code=1466, name=]
+Farm [code=1119, name=]
+Farm [code=1521, name=]
+Farm [code=1564, name=]
+Farm [code=1279, name=]
+] ]
+Municipality [id=19092, originalName=Scandolara Ravara Farms: [
+Farm [code=1608, name=]
+Farm [code=864, name=]
+Farm [code=1135, name=]
+Farm [code=830, name=]
+Farm [code=377, name=]
+Farm [code=1610, name=]
+Farm [code=1536, name=]
+Farm [code=818, name=]
+Farm [code=1348, name=]
+Farm [code=1395, name=]
+Farm [code=1169, name=]
+Farm [code=1392, name=]
+Farm [code=400, name=]
+Farm [code=1193, name=]
+Farm [code=1488, name=]
+Farm [code=1190, name=]
+Farm [code=1138, name=]
+Farm [code=827, name=]
+Farm [code=1602, name=]
+Farm [code=1369, name=]
+Farm [code=877, name=]
+Farm [code=850, name=]
+Farm [code=844, name=]
+Farm [code=888, name=]
+Farm [code=889, name=]
+Farm [code=819, name=]
+Farm [code=874, name=]
+Farm [code=1347, name=]
+Farm [code=1258, name=]
+Farm [code=405, name=]
+Farm [code=1534, name=]
+Farm [code=1526, name=]
+Farm [code=869, name=]
+Farm [code=839, name=]
+Farm [code=1297, name=]
+Farm [code=1424, name=]
+Farm [code=873, name=]
+] ]
+Municipality [id=19009, originalName=Calvatone Farms: [
+Farm [code=861, name=]
+Farm [code=1323, name=]
+Farm [code=378, name=]
+Farm [code=1417, name=]
+Farm [code=1637, name=]
+Farm [code=385, name=]
+Farm [code=1376, name=]
+Farm [code=1171, name=]
+Farm [code=1344, name=]
+Farm [code=398, name=]
+Farm [code=871, name=]
+Farm [code=1143, name=]
+Farm [code=1159, name=]
+Farm [code=883, name=]
+Farm [code=1178, name=]
+Farm [code=1287, name=]
+Farm [code=1371, name=]
+Farm [code=1324, name=]
+Farm [code=1588, name=]
+Farm [code=1372, name=]
+Farm [code=1562, name=]
+Farm [code=1286, name=]
+Farm [code=1310, name=]
+Farm [code=1450, name=]
+Farm [code=1115, name=]
+] ]
+Municipality [id=19091, originalName=San Martino del Lago Farms: [
+Farm [code=1145, name=]
+Farm [code=902, name=]
+Farm [code=820, name=]
+Farm [code=1137, name=]
+Farm [code=1177, name=]
+Farm [code=1133, name=]
+Farm [code=1415, name=]
+Farm [code=891, name=]
+Farm [code=1328, name=]
+Farm [code=1326, name=]
+Farm [code=1635, name=]
+Farm [code=399, name=]
+Farm [code=835, name=]
+Farm [code=887, name=]
+Farm [code=1158, name=]
+Farm [code=414, name=]
+Farm [code=381, name=]
+Farm [code=379, name=]
+Farm [code=1535, name=]
+Farm [code=852, name=]
+] ]
+Municipality [id=19052, originalName=Gussola Farms: [
+Farm [code=1110, name=]
+Farm [code=867, name=]
+Farm [code=380, name=]
+Farm [code=1393, name=]
+Farm [code=1220, name=]
+Farm [code=828, name=]
+Farm [code=1601, name=]
+Farm [code=1298, name=]
+Farm [code=1448, name=]
+Farm [code=1611, name=]
+Farm [code=1497, name=]
+Farm [code=1281, name=]
+Farm [code=1151, name=]
+Farm [code=1100, name=]
+Farm [code=881, name=]
+Farm [code=1356, name=]
+Farm [code=1351, name=]
+Farm [code=1300, name=]
+Farm [code=1267, name=]
+Farm [code=1186, name=]
+Farm [code=855, name=]
+Farm [code=1129, name=]
+Farm [code=382, name=]
+Farm [code=1520, name=]
+Farm [code=1223, name=]
+Farm [code=1522, name=]
+Farm [code=1185, name=]
+Farm [code=403, name=]
+Farm [code=837, name=]
+Farm [code=831, name=]
+Farm [code=1320, name=]
+Farm [code=910, name=]
+Farm [code=1140, name=]
+Farm [code=1370, name=]
+Farm [code=1288, name=]
+Farm [code=1264, name=]
+Farm [code=858, name=]
+Farm [code=1146, name=]
+Farm [code=886, name=]
+Farm [code=1493, name=]
+Farm [code=863, name=]
+Farm [code=1117, name=]
+Farm [code=847, name=]
+Farm [code=1222, name=]
+Farm [code=906, name=]
+Farm [code=1124, name=]
+Farm [code=854, name=]
+Farm [code=1123, name=]
+] ]
+Municipality [id=19108, originalName=Torricella del Pizzo Farms: [
+Farm [code=1181, name=]
+Farm [code=836, name=]
+Farm [code=390, name=]
+Farm [code=1109, name=]
+Farm [code=1308, name=]
+Farm [code=406, name=]
+Farm [code=1157, name=]
+Farm [code=879, name=]
+Farm [code=849, name=]
+Farm [code=1142, name=]
+Farm [code=848, name=]
+Farm [code=1183, name=]
+Farm [code=1305, name=]
+Farm [code=1465, name=]
+Farm [code=1134, name=]
+Farm [code=1341, name=]
+Farm [code=1102, name=]
+Farm [code=1153, name=]
+Farm [code=872, name=]
+Farm [code=1130, name=]
+Farm [code=387, name=]
+Farm [code=890, name=]
+Farm [code=859, name=]
+Farm [code=825, name=]
+Farm [code=1592, name=]
+Farm [code=1152, name=]
+Farm [code=1108, name=]
+Farm [code=826, name=]
+Farm [code=1175, name=]
+Farm [code=1591, name=]
+Farm [code=1464, name=]
+] ]
+Municipality [id=19096, originalName=Solarolo Rainerio Farms: [
+Farm [code=392, name=]
+Farm [code=1150, name=]
+Farm [code=1559, name=]
+Farm [code=884, name=]
+Farm [code=423, name=]
+Farm [code=817, name=]
+Farm [code=1114, name=]
+Farm [code=1357, name=]
+Farm [code=1560, name=]
+Farm [code=1600, name=]
+Farm [code=878, name=]
+Farm [code=1455, name=]
+Farm [code=846, name=]
+Farm [code=840, name=]
+Farm [code=1518, name=]
+Farm [code=1661, name=]
+Farm [code=1519, name=]
+] ]
+Municipality [id=19042, originalName=Drizzona Farms: [
+Farm [code=421, name=]
+Farm [code=418, name=]
+Farm [code=395, name=]
+Farm [code=1154, name=]
+Farm [code=1170, name=]
+Farm [code=896, name=]
+Farm [code=416, name=]
+Farm [code=1461, name=]
+] ]
+Municipality [id=19083, originalName=Rivarolo del Re ed Uniti Farms: [
+Farm [code=1599, name=]
+Farm [code=1489, name=]
+Farm [code=1172, name=]
+Farm [code=1389, name=]
+Farm [code=1182, name=]
+Farm [code=1161, name=]
+Farm [code=1636, name=]
+Farm [code=870, name=]
+Farm [code=876, name=]
+Farm [code=1662, name=]
+Farm [code=823, name=]
+Farm [code=843, name=]
+Farm [code=1189, name=]
+Farm [code=1111, name=]
+Farm [code=1160, name=]
+Farm [code=1214, name=]
+Farm [code=1155, name=]
+Farm [code=396, name=]
+Farm [code=1352, name=]
+Farm [code=829, name=]
+Farm [code=1120, name=]
+Farm [code=1165, name=]
+Farm [code=1327, name=]
+Farm [code=1332, name=]
+Farm [code=899, name=]
+Farm [code=885, name=]
+Farm [code=1284, name=]
+Farm [code=1122, name=]
+Farm [code=1530, name=]
+Farm [code=1595, name=]
+Farm [code=1642, name=]
+Farm [code=862, name=]
+Farm [code=1462, name=]
+Farm [code=1597, name=]
+Farm [code=1524, name=]
+Farm [code=1191, name=]
+Farm [code=1418, name=]
+Farm [code=1607, name=]
+Farm [code=901, name=]
+Farm [code=857, name=]
+Farm [code=1125, name=]
+Farm [code=868, name=]
+Farm [code=1342, name=]
+Farm [code=900, name=]
+Farm [code=1593, name=]
+Farm [code=1247, name=]
+Farm [code=422, name=]
+Farm [code=822, name=]
+Farm [code=419, name=]
+Farm [code=1598, name=]
+Farm [code=1613, name=]
+Farm [code=1416, name=]
+Farm [code=1144, name=]
+] ]
+Municipality [id=19106, originalName=Tornata Farms: [
+Farm [code=917, name=]
+Farm [code=1246, name=]
+Farm [code=821, name=]
+Farm [code=1166, name=]
+Farm [code=903, name=]
+Farm [code=1260, name=]
+Farm [code=1492, name=]
+Farm [code=1306, name=]
+Farm [code=1589, name=]
+Farm [code=1156, name=]
+Farm [code=1263, name=]
+Farm [code=1665, name=]
+Farm [code=404, name=]
+Farm [code=1184, name=]
+Farm [code=1377, name=]
+Farm [code=907, name=]
+] ]
+Municipality [id=19090, originalName=San Giovanni in Croce Farms: [
+Farm [code=1449, name=]
+Farm [code=1128, name=]
+Farm [code=908, name=]
+Farm [code=1218, name=]
+Farm [code=1603, name=]
+Farm [code=410, name=]
+Farm [code=1179, name=]
+Farm [code=1668, name=]
+Farm [code=1325, name=]
+Farm [code=1451, name=]
+Farm [code=1421, name=]
+Farm [code=1250, name=]
+] ]
+Municipality [id=19101, originalName=Spineda Farms: [
+Farm [code=412, name=]
+Farm [code=1147, name=]
+Farm [code=1261, name=]
+Farm [code=1098, name=]
+Farm [code=1452, name=]
+Farm [code=911, name=]
+Farm [code=916, name=]
+Farm [code=413, name=]
+Farm [code=1594, name=]
+Farm [code=1194, name=]
+Farm [code=1113, name=]
+Farm [code=1664, name=]
+] ]
+Municipality [id=19100, originalName=Spinadesco Farms: [
+Farm [code=521, name=]
+Farm [code=427, name=]
+Farm [code=956, name=]
+Farm [code=950, name=]
+Farm [code=974, name=]
+Farm [code=1483, name=]
+Farm [code=514, name=]
+Farm [code=745, name=]
+Farm [code=939, name=]
+Farm [code=428, name=]
+] ]
+Municipality [id=19107, originalName=Torre de' Picenardi Farms: [
+Farm [code=785, name=]
+Farm [code=453, name=]
+Farm [code=1514, name=]
+Farm [code=1242, name=]
+Farm [code=486, name=]
+Farm [code=471, name=]
+Farm [code=1061, name=]
+Farm [code=1633, name=]
+Farm [code=778, name=]
+Farm [code=1066, name=]
+Farm [code=1057, name=]
+Farm [code=479, name=]
+] ]
+Municipality [id=19046, originalName=Gadesco-Pieve Delmona Farms: [
+Farm [code=488, name=]
+Farm [code=724, name=]
+Farm [code=1302, name=]
+Farm [code=967, name=]
+Farm [code=736, name=]
+Farm [code=1365, name=]
+Farm [code=1274, name=]
+Farm [code=957, name=]
+Farm [code=566, name=]
+Farm [code=955, name=]
+Farm [code=557, name=]
+Farm [code=1337, name=]
+Farm [code=1315, name=]
+Farm [code=1294, name=]
+] ]
+Municipality [id=19026, originalName=Castelverde Farms: [
+Farm [code=918, name=]
+Farm [code=959, name=]
+Farm [code=499, name=]
+Farm [code=520, name=]
+Farm [code=526, name=]
+Farm [code=990, name=]
+Farm [code=1364, name=]
+Farm [code=489, name=]
+Farm [code=505, name=]
+Farm [code=746, name=]
+Farm [code=533, name=]
+Farm [code=513, name=]
+Farm [code=564, name=]
+Farm [code=493, name=]
+Farm [code=522, name=]
+Farm [code=538, name=]
+Farm [code=540, name=]
+Farm [code=988, name=]
+Farm [code=985, name=]
+Farm [code=1581, name=]
+Farm [code=723, name=]
+Farm [code=979, name=]
+Farm [code=744, name=]
+Farm [code=545, name=]
+Farm [code=973, name=]
+] ]
+Municipality [id=19036, originalName=Cremona Farms: [
+Farm [code=509, name=]
+Farm [code=972, name=]
+Farm [code=535, name=]
+Farm [code=492, name=]
+Farm [code=1552, name=]
+Farm [code=732, name=]
+Farm [code=929, name=]
+Farm [code=501, name=]
+Farm [code=506, name=]
+Farm [code=729, name=]
+Farm [code=932, name=]
+Farm [code=550, name=]
+Farm [code=987, name=]
+Farm [code=496, name=]
+Farm [code=958, name=]
+Farm [code=497, name=]
+Farm [code=552, name=]
+Farm [code=984, name=]
+Farm [code=731, name=]
+Farm [code=532, name=]
+Farm [code=1273, name=]
+Farm [code=546, name=]
+Farm [code=741, name=]
+Farm [code=517, name=]
+Farm [code=1209, name=]
+Farm [code=944, name=]
+Farm [code=1237, name=]
+Farm [code=529, name=]
+Farm [code=936, name=]
+Farm [code=1412, name=]
+Farm [code=1579, name=]
+Farm [code=523, name=]
+Farm [code=490, name=]
+Farm [code=923, name=]
+Farm [code=735, name=]
+Farm [code=976, name=]
+Farm [code=1510, name=]
+Farm [code=527, name=]
+Farm [code=531, name=]
+Farm [code=948, name=]
+Farm [code=519, name=]
+Farm [code=1551, name=]
+Farm [code=547, name=]
+Farm [code=737, name=]
+Farm [code=559, name=]
+Farm [code=494, name=]
+Farm [code=563, name=]
+Farm [code=951, name=]
+Farm [code=749, name=]
+Farm [code=542, name=]
+Farm [code=512, name=]
+Farm [code=562, name=]
+] ]
+Municipality [id=19095, originalName=Sesto ed Uniti Farms: [
+Farm [code=747, name=]
+Farm [code=752, name=]
+Farm [code=963, name=]
+Farm [code=743, name=]
+Farm [code=971, name=]
+Farm [code=930, name=]
+Farm [code=926, name=]
+Farm [code=964, name=]
+Farm [code=553, name=]
+Farm [code=925, name=]
+Farm [code=949, name=]
+Farm [code=507, name=]
+Farm [code=931, name=]
+Farm [code=491, name=]
+Farm [code=1363, name=]
+Farm [code=960, name=]
+Farm [code=970, name=]
+Farm [code=524, name=]
+Farm [code=565, name=]
+Farm [code=928, name=]
+] ]
+Municipality [id=19050, originalName=Grontardo Farms: [
+Farm [code=750, name=]
+Farm [code=935, name=]
+Farm [code=515, name=]
+Farm [code=965, name=]
+Farm [code=727, name=]
+Farm [code=495, name=]
+Farm [code=982, name=]
+] ]
+Municipality [id=19048, originalName=Gerre de' Caprioli Farms: [
+Farm [code=975, name=]
+Farm [code=991, name=]
+Farm [code=528, name=]
+Farm [code=733, name=]
+Farm [code=498, name=]
+] ]
+Municipality [id=19056, originalName=Malagnino Farms: [
+Farm [code=1509, name=]
+Farm [code=500, name=]
+Farm [code=1482, name=]
+Farm [code=947, name=]
+Farm [code=555, name=]
+Farm [code=981, name=]
+Farm [code=937, name=]
+Farm [code=978, name=]
+] ]
+Municipality [id=19077, originalName=Pozzaglio ed Uniti Farms: [
+Farm [code=1630, name=]
+Farm [code=940, name=]
+Farm [code=502, name=]
+Farm [code=536, name=]
+Farm [code=525, name=]
+Farm [code=952, name=]
+Farm [code=534, name=]
+Farm [code=1580, name=]
+Farm [code=1410, name=]
+Farm [code=748, name=]
+Farm [code=980, name=]
+Farm [code=556, name=]
+Farm [code=969, name=]
+Farm [code=1440, name=]
+Farm [code=968, name=]
+Farm [code=1553, name=]
+Farm [code=560, name=]
+] ]
+Municipality [id=19068, originalName=Persico Dosimo Farms: [
+Farm [code=518, name=]
+Farm [code=537, name=]
+Farm [code=551, name=]
+Farm [code=946, name=]
+Farm [code=1411, name=]
+Farm [code=503, name=]
+Farm [code=510, name=]
+Farm [code=728, name=]
+Farm [code=983, name=]
+Farm [code=941, name=]
+Farm [code=554, name=]
+Farm [code=921, name=]
+Farm [code=734, name=]
+Farm [code=751, name=]
+Farm [code=953, name=]
+Farm [code=548, name=]
+Farm [code=961, name=]
+] ]
+Municipality [id=19103, originalName=Stagno Lombardo Farms: [
+Farm [code=962, name=]
+Farm [code=927, name=]
+Farm [code=1460, name=]
+Farm [code=504, name=]
+Farm [code=934, name=]
+Farm [code=549, name=]
+Farm [code=1383, name=]
+Farm [code=530, name=]
+Farm [code=567, name=]
+Farm [code=1211, name=]
+Farm [code=938, name=]
+Farm [code=561, name=]
+Farm [code=1605, name=]
+Farm [code=1238, name=]
+Farm [code=539, name=]
+Farm [code=945, name=]
+Farm [code=543, name=]
+Farm [code=541, name=]
+Farm [code=738, name=]
+Farm [code=1654, name=]
+Farm [code=954, name=]
+] ]
+Municipality [id=19074, originalName=Pieve d'Olmi Farms: [
+Farm [code=1481, name=]
+Farm [code=742, name=]
+Farm [code=933, name=]
+Farm [code=730, name=]
+Farm [code=1655, name=]
+Farm [code=508, name=]
+Farm [code=558, name=]
+Farm [code=942, name=]
+] ]
+Municipality [id=19093, originalName=Scandolara Ripa d'Oglio Farms: [
+Farm [code=511, name=]
+Farm [code=739, name=]
+Farm [code=725, name=]
+Farm [code=726, name=]
+Farm [code=1210, name=]
+Farm [code=740, name=]
+] ]
+Municipality [id=19006, originalName=Bonemerse Farms: [
+Farm [code=966, name=]
+Farm [code=516, name=]
+Farm [code=1629, name=]
+Farm [code=919, name=]
+Farm [code=924, name=]
+] ]
+Municipality [id=19102, originalName=Spino d'Adda Farms: [
+Farm [code=1499, name=]
+Farm [code=1358, name=]
+Farm [code=1269, name=]
+Farm [code=573, name=]
+Farm [code=576, name=]
+Farm [code=1398, name=]
+Farm [code=578, name=]
+Farm [code=1268, name=]
+Farm [code=1199, name=]
+Farm [code=1197, name=]
+] ]
+Municipality [id=19037, originalName=Cremosano Farms: [
+Farm [code=1546, name=]
+Farm [code=592, name=]
+Farm [code=1228, name=]
+Farm [code=580, name=]
+Farm [code=615, name=]
+Farm [code=1501, name=]
+Farm [code=1201, name=]
+Farm [code=1621, name=]
+] ]
+Municipality [id=19024, originalName=Castel Gabbiano Farms: [
+Farm [code=604, name=]
+] ]
+Municipality [id=19114, originalName=Volongo Farms: [
+Farm [code=1026, name=]
+Farm [code=801, name=]
+Farm [code=1366, name=]
+Farm [code=1014, name=]
+Farm [code=1034, name=]
+Farm [code=764, name=]
+Farm [code=1585, name=]
+Farm [code=1084, name=]
+Farm [code=1083, name=]
+] ]
+Municipality [id=19053, originalName=Isola Dovarese Farms: [
+Farm [code=765, name=]
+Farm [code=1442, name=]
+Farm [code=1658, name=]
+Farm [code=1033, name=]
+Farm [code=806, name=]
+Farm [code=1042, name=]
+] ]
+Municipality [id=19057, originalName=Martignana di Po Farms: [
+Farm [code=1355, name=]
+Farm [code=1614, name=]
+Farm [code=1496, name=]
+Farm [code=1373, name=]
+Farm [code=1285, name=]
+Farm [code=1567, name=]
+Farm [code=1221, name=]
+Farm [code=1563, name=]
+Farm [code=905, name=]
+Farm [code=1604, name=]
+Farm [code=1527, name=]
+Farm [code=1666, name=]
+Farm [code=1640, name=]
+Farm [code=1131, name=]
+Farm [code=1394, name=]
+Farm [code=1331, name=]
+Farm [code=1375, name=]
+Farm [code=832, name=]
+Farm [code=1215, name=]
+Farm [code=1307, name=]
+Farm [code=833, name=]
+] ]
+Municipality [id=19023, originalName=Casteldidone Farms: [
+Farm [code=1217, name=]
+Farm [code=1244, name=]
+Farm [code=1187, name=]
+Farm [code=1379, name=]
+Farm [code=1107, name=]
+Farm [code=845, name=]
+Farm [code=1116, name=]
+Farm [code=1121, name=]
+Farm [code=1248, name=]
+Farm [code=1099, name=]
+Farm [code=1423, name=]
+Farm [code=1112, name=]
+Farm [code=1663, name=]
+Farm [code=1216, name=]
+Farm [code=1495, name=]
+Farm [code=895, name=]
+Farm [code=1103, name=]
+Farm [code=904, name=]
+Farm [code=1487, name=]
+Farm [code=1333, name=]
+Farm [code=1106, name=]
+] ]
+Municipality [id=19078, originalName=Quintano Farms: [
+Farm [code=1542, name=]
+] ]] ]
+DEBUG [AWT-EventQueue-0] 2016-06-23 11:33:05,675 lombardyBiogasPaper.SimulationContext - Crops Loaded. 
+SimulationContext contains:
+AvailableArableCrops [[ArableCrop [id=17, name= tom, originalName=tomato], ArableCrop [id=10, name= suf, originalName=sunflower], ArableCrop [id=16, name= pot, originalName=potato], ArableCrop [id=9, name= sfw, originalName=soft wheat], ArableCrop [id=15, name= bar, originalName=mellon], ArableCrop [id=8, name= drw, originalName=durum wheat], ArableCrop [id=14, name= mel, originalName=grain maize], ArableCrop [id=7, name= heg, originalName=Herbage of Gramineae (grassland)], ArableCrop [id=13, name= mze, originalName=sillage maize], ArableCrop [id=6, name= alf, originalName=alfalfa (grassland)], ArableCrop [id=12, name= smze, originalName=lettuce], ArableCrop [id=5, name= wme, originalName=watermelon], ArableCrop [id=21, name= sojII, originalName=secon harvest of soja], ArableCrop [id=4, name= sca, originalName=savoy cabbage], ArableCrop [id=20, name= sfwII, originalName=secon harvest of soft wheat], ArableCrop [id=3, name= sbt, originalName=Sugar beet], ArableCrop [id=19, name= soj, originalName=Soja], ArableCrop [id=2, name= ogl, originalName=Other grain legumes], ArableCrop [id=18, name= gras, originalName=grassland], ArableCrop [id=1, name=ofc, originalName=other forage crops], ArableCrop [id=11, name= let, originalName=barley]]]
+WARN  [AWT-EventQueue-0] 2016-06-23 11:35:20,455 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 11:35:20,456 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 11:35:20,456 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 11:48:43,303 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 11:48:43,304 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 11:48:43,305 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 11:53:46,314 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 11:53:46,315 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 11:53:46,316 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 11:55:59,423 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 11:55:59,423 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 11:55:59,424 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 12:40:37,936 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 12:40:37,937 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 12:40:37,938 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+ERROR [AWT-EventQueue-0] 2016-06-23 12:40:43,907 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at lombardyBiogasPaper.utilities.Utility.convertExcelToTable(Utility.java:40)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.loadFarmData(ExcelDataLoader.java:108)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.getFarms(ExcelDataLoader.java:96)
+	at lombardyBiogasPaper.SimulationContext.build(SimulationContext.java:91)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+WARN  [AWT-EventQueue-0] 2016-06-23 12:43:37,642 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 12:43:37,643 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 12:43:37,644 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+ERROR [AWT-EventQueue-0] 2016-06-23 12:43:45,406 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IllegalStateException: Cannot get a text value from a numeric cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
+	at lombardyBiogasPaper.utilities.Utility.convertExcelToTable(Utility.java:40)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.loadFarmData(ExcelDataLoader.java:108)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.getFarms(ExcelDataLoader.java:96)
+	at lombardyBiogasPaper.SimulationContext.build(SimulationContext.java:91)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+WARN  [AWT-EventQueue-0] 2016-06-23 12:45:10,125 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 12:45:10,126 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 12:45:10,126 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 12:49:54,661 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 12:49:54,662 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 12:49:54,662 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 12:51:21,122 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 12:51:21,124 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 12:51:21,124 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 12:53:04,307 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 12:53:04,308 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 12:53:04,309 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-06-23 13:12:22,677 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 13:12:22,678 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 13:12:22,678 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+ERROR [AWT-EventQueue-0] 2016-06-23 13:12:31,145 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.ClassCastException: com.google.common.collect.StandardTable$Row cannot be cast to java.util.HashMap
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.loadFarmData(ExcelDataLoader.java:111)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.getFarms(ExcelDataLoader.java:96)
+	at lombardyBiogasPaper.SimulationContext.build(SimulationContext.java:91)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+WARN  [AWT-EventQueue-0] 2016-06-23 13:13:36,307 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 13:13:36,309 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 13:13:36,309 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+ERROR [AWT-EventQueue-0] 2016-06-23 13:13:46,100 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.ClassCastException: com.google.common.collect.StandardTable$Row cannot be cast to java.util.HashMap
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.loadFarmData(ExcelDataLoader.java:112)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.getFarms(ExcelDataLoader.java:97)
+	at lombardyBiogasPaper.SimulationContext.build(SimulationContext.java:91)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+WARN  [AWT-EventQueue-0] 2016-06-23 13:14:25,888 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-06-23 13:14:25,889 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-06-23 13:14:25,890 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+ERROR [AWT-EventQueue-0] 2016-06-23 13:14:39,418 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.ClassCastException: com.google.common.collect.HashBiMap$Inverse$InverseKeySet cannot be cast to java.util.ArrayList
+	at crops.AvailableArableCrops.getAll(AvailableArableCrops.java:22)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.loadFarmData(ExcelDataLoader.java:113)
+	at lombardyBiogasPaper.dataLoaders.ExcelDataLoader.getFarms(ExcelDataLoader.java:97)
+	at lombardyBiogasPaper.SimulationContext.build(SimulationContext.java:91)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)

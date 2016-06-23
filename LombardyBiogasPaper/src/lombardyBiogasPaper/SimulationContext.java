@@ -2,30 +2,31 @@ package lombardyBiogasPaper;
 
 
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Map;
+
+import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
 
 import org.apache.log4j.Level;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import com.google.common.collect.ArrayListMultimap;
 
 import repast.simphony.context.Context;
 import repast.simphony.context.DefaultContext;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
 import simphony.util.messages.MessageCenter;
+import crops.ArableCrop;
+import crops.AvailableArableCrops;
 
-import com.google.common.collect.ArrayListMultimap;
 
-
-public class SimulationContext extends DefaultContext<Municipality> implements ContextBuilder<Object> {
+public class SimulationContext extends DefaultContext<Object> implements ContextBuilder<Object> {
 	
 	private static SimulationContext instance=null;
+	
+	private AvailableArableCrops crops = new AvailableArableCrops();
 
 	
 	/**
@@ -53,6 +54,11 @@ public class SimulationContext extends DefaultContext<Municipality> implements C
 		mc.fireMessageEvent(level, message, null);
 	}
 	
+	
+	public AvailableArableCrops getCrops() {
+		return crops;
+	}
+
 	/**
 	 * It builds the Contexts of Agroscape. <br />
 	 * The steps that this method does, are: <br />
@@ -61,15 +67,35 @@ public class SimulationContext extends DefaultContext<Municipality> implements C
 	 */
 
 	@Override
-	public Context<Municipality> build(Context<Object> context)  {
-		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Start building SimulationContet");
+	public Context<Object> build(Context<Object> context)  {
+		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Start building SimulationContext");
 			
 		//1. Load Data
 		String dataFile = RunEnvironment.getInstance().getParameters().getString("initializationFile");
 		try {
 			ExcelDataLoader edl = new ExcelDataLoader(dataFile);
-			this.addAll(edl.getMunicipalities());
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Loading from Excel file"+dataFile);
 			
+			//load municipalities
+			ArrayList<Municipality> ms = edl.getMunicipalities();
+			for(Municipality m: ms) {SimulationContext.getInstance().addSubContext(m);}
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Municipalities Loaded. \nSimulationContext contains:\n"+this.toString());
+			
+			//load crops
+			
+			ArrayList<ArableCrop> cs = edl.getAvailableCrops();
+			for(ArableCrop c: cs) {SimulationContext.getInstance().getCrops().add(c);}
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Crops Loaded. \nSimulationContext contains:\n"+this.getCrops().toString());
+			
+			//load farms
+			ArrayListMultimap<Integer,Farm> fs = edl.getFarms();
+			for (int mun : fs.keySet()) { 
+				Municipality m = (Municipality) SimulationContext.getInstance().findContext(mun);
+				for(Farm f: fs.get(mun)) {
+					m.add(f);
+				}
+			}
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Farms Loaded. \nSimulationContext contains:\n"+this.toString());
 			
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
@@ -84,8 +110,6 @@ public class SimulationContext extends DefaultContext<Municipality> implements C
 		
 		//3. create farmers
 		
-		//debug
-		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Start building SimulationContet");
 		
 		
 		//4. Return the created SimulationContext
@@ -93,70 +117,29 @@ public class SimulationContext extends DefaultContext<Municipality> implements C
 	}
 	
 	
-	
-	
-	public class ExcelDataLoader  {
-
-		private Workbook excelWB; 
+	public Iterable<Municipality> getMunicipalities() {
+		ArrayList<Municipality> ms = new ArrayList<Municipality>();
+		Map<Object, Context<? extends Object>> objs = this.subContexts;
 		
-		/**
-		 * Constructor
-		 * @param excel_location
-		 * @throws InvalidFormatException
-		 * @throws IOException
-		 */
-		public ExcelDataLoader(String excelLocation) throws InvalidFormatException, IOException {
-			super();
-			Workbook wb = WorkbookFactory.create(new File(excelLocation));
-			this.excelWB=wb;
+		for(Object o: objs.keySet()) {
+			Municipality m = (Municipality)objs.get(o);
+			ms.add(m);
 		}
 		
-		public ArrayList<Municipality> getMunicipalities() {
-			ArrayList<Municipality> r = new ArrayList<Municipality>();
-			Sheet sh = this.excelWB.getSheet("municipalities");
-			Iterator<Row> rowItr = sh.iterator(); 
-			rowItr.next(); //skip first row
-			while(rowItr.hasNext()) {
-				Row row = rowItr.next();
-				String name = row.getCell(0).getStringCellValue();
-				int id = (int)row.getCell(1).getNumericCellValue();			
-				r.add(new Municipality(id, name));
-			}
-			
-			
-			return r;
-		}
-		
-		
-		public void addFarms(SimulationContext sc) {
-			ArrayListMultimap<Integer,Farm> r = ArrayListMultimap.create();
-			
-			//1. get farms per municipality
-			Sheet sh = this.excelWB.getSheet("farms");
-			Iterator<Row> rowItr = sh.iterator(); 
-			rowItr.next(); //skip first row
-			while(rowItr.hasNext()) {
-				Row row = rowItr.next();
-				int farm_id = (int)row.getCell(0).getNumericCellValue();
-				int mun_id = (int)row.getCell(1).getNumericCellValue();			
-				Farm f = new Farm(farm_id);
-				r.put(mun_id, f);
-			}
-			
-			//2. foreach municipality, add them to mun.context
-			for (int mun : r.keySet()) { 
-				Municipality m = (Municipality) sc.findContext(mun);
-				m.addAll(r.get(mun));
-				
-				//debug
-				SimulationContext.logMessage(this.getClass(), Level.DEBUG, "[added]" + m.toString());
-			}
-			
-			
-			
-		}
-		
+		return ms;
 	}
 
 	
-}
+	@Override
+	public String toString() {
+		String r = "SimulationContext [ Municipalities: ";
+		for (Municipality m: this.getMunicipalities())  {
+			r += "\n" + m.toString();
+		}
+		r +="] ]";
+		
+		return r;
+	}
+
+	
+} //end outer class

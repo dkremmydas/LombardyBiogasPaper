@@ -4,21 +4,24 @@ import repast.simphony.context.DefaultContext;
 
 public class Municipality extends DefaultContext<Farm> {
 	
-	private int id;
 	private String originalName;
 	
 	
 	public Municipality(int id, String originalName) {
-		super(originalName,id);
-		this.id = id;
+		super(id,id);
 		this.originalName = originalName;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Municipality [id=" + id + ", originalName=" + originalName
-				+ ", allObjs=" + allObjs + "]";
+		String r = "Municipality [id=" + this.getId() + ", originalName=" + originalName + " Farms: [";
+		
+		for(Farm f: this.getAgentLayer(Farm.class)) {
+			r += "\n" + f.toString();
+		}
+				
+		return r+"\n] ]";
 	}
 	
 	
