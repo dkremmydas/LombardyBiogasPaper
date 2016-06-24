@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
+import lombardyBiogasPaper.agents.Farm;
+import lombardyBiogasPaper.agents.Municipality;
+import lombardyBiogasPaper.crops.ArableCrop;
+import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
 
 import org.apache.log4j.Level;
@@ -18,8 +22,6 @@ import repast.simphony.context.DefaultContext;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
 import simphony.util.messages.MessageCenter;
-import crops.ArableCrop;
-import crops.AvailableArableCrops;
 
 
 public class SimulationContext extends DefaultContext<Object> implements ContextBuilder<Object> {
@@ -81,8 +83,7 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 			for(Municipality m: ms) {SimulationContext.getInstance().addSubContext(m);}
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Municipalities Loaded. \nSimulationContext contains:\n"+this.toString());
 			
-			//load crops
-			
+			//load crops			
 			ArrayList<ArableCrop> cs = edl.getAvailableCrops();
 			for(ArableCrop c: cs) {SimulationContext.getInstance().getCrops().add(c);}
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Crops Loaded. \nSimulationContext contains:\n"+this.getCrops().toString());

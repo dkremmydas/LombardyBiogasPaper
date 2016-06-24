@@ -1,8 +1,8 @@
-package lombardyBiogasPaper;
+package lombardyBiogasPaper.agents;
 
 import java.util.HashMap;
 
-import crops.ArableCrop;
+import lombardyBiogasPaper.crops.ArableCrop;
 
 public class PriceExpectations {
 

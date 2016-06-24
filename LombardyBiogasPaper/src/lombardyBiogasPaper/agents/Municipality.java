@@ -1,4 +1,4 @@
-package lombardyBiogasPaper;
+package lombardyBiogasPaper.agents;
 
 import repast.simphony.context.DefaultContext;
 

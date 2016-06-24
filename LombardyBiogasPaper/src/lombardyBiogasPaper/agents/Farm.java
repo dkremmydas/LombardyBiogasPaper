@@ -1,8 +1,8 @@
-package lombardyBiogasPaper;
+package lombardyBiogasPaper.agents;
 
 import java.util.HashMap;
 
-import crops.ArableCrop;
+import lombardyBiogasPaper.crops.ArableCrop;
 
 
 
@@ -28,6 +28,16 @@ public class Farm  {
 	 */
 	private HashMap<ArableCrop,Float> curSurface = new HashMap<>();
 	
+	/**
+	 * The expected yields for each arableCrop
+	 */
+	private HashMap<ArableCrop,Float> yield = new HashMap<>();
+	
+	/**
+	 * The expected varcosts for each arableCrop
+	 */
+	private HashMap<ArableCrop,Float> varcost = new HashMap<>();
+	
 	
 	public Farm(int code, String name) {
 		super();
@@ -42,13 +52,23 @@ public class Farm  {
 	@Override
 	public String toString() {
 		String r = "Farm [code=" + id + ", name=" + name ;
-		r += "Current Surface: [" + curSurface.toString() + "]";
+		r += "\nCurrent Surface: [" + curSurface.toString() + "]";
+		r += "\nCurrent Yields Expectations: [" + yield.toString() + "]";
+		r += "\nCurrent VarCosts Expectations: [" + varcost.toString() + "]";
 		
-		return r + "]";
+		return r + "\n]";
 	}
 
 	public HashMap<ArableCrop, Float> getCurSurface() {
 		return curSurface;
+	}
+	
+	public HashMap<ArableCrop, Float> getYield() {
+		return yield;
+	}
+	
+	public HashMap<ArableCrop, Float> getVarCost() {
+		return varcost;
 	}
 
 	public int getId() {

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 import com.google.common.collect.ArrayListMultimap;
 
-import lombardyBiogasPaper.Farm;
-import lombardyBiogasPaper.Municipality;
-import crops.ArableCrop;
-import crops.AvailableArableCrops;
+import lombardyBiogasPaper.agents.Farm;
+import lombardyBiogasPaper.agents.Municipality;
+import lombardyBiogasPaper.crops.ArableCrop;
+import lombardyBiogasPaper.crops.AvailableArableCrops;
 
 /**
  * Interface for Data Loaders <br />

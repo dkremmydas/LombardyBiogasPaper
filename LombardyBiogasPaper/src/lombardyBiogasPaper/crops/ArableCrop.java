@@ -1,4 +1,5 @@
-package crops;
+package lombardyBiogasPaper.crops;
+
 
 public class ArableCrop {
 	
@@ -28,8 +29,9 @@ public class ArableCrop {
 
 	@Override
 	public String toString() {
-		return "ArableCrop [id=" + id + ", name=" + name + ", originalName="
-				+ originalName + "]";
+		//return "ArableCrop [id=" + id + ", name=" + name + ", originalName="
+		//		+ originalName + "]";
+		return name;
 	}
 
 

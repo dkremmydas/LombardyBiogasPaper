@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
@@ -18,6 +19,8 @@ public class Utility {
 	 * @return
 	 */
 	public static Table<String,String,String>  convertExcelToTable(Sheet sh) {
+		DataFormatter objDefaultFormat = new DataFormatter();
+		
 		Table<String,String,String> t =  HashBasedTable.create();
 
 		HashMap<Integer,String> colHeadings = new HashMap<>();
@@ -40,7 +43,7 @@ public class Utility {
 			Cell cell = colItr.next(); 
 			String rowHeading;
 			if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC) {
-				rowHeading = String.valueOf(cell.getNumericCellValue());
+				rowHeading = objDefaultFormat.formatCellValue(cell);
 			}
 			else {
 				rowHeading = cell.getStringCellValue();
@@ -49,7 +52,7 @@ public class Utility {
 				cell = colItr.next();
 				String value;
 				if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC) {
-					 value = String.valueOf(cell.getNumericCellValue());
+					 value = objDefaultFormat.formatCellValue(cell);
 				}
 				else {
 					 value = cell.getStringCellValue();

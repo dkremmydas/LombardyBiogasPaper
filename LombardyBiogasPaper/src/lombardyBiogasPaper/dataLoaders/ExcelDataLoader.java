@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
-import lombardyBiogasPaper.Farm;
-import lombardyBiogasPaper.Municipality;
 import lombardyBiogasPaper.SimulationContext;
+import lombardyBiogasPaper.agents.Farm;
+import lombardyBiogasPaper.agents.Municipality;
+import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.utilities.Utility;
 
 import org.apache.log4j.Level;
@@ -20,8 +21,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Table;
-
-import crops.ArableCrop;
 
 public class ExcelDataLoader implements DataLoader {
 	
@@ -95,6 +94,9 @@ public class ExcelDataLoader implements DataLoader {
 		//load farm data
 		this.loadFarmData(r);
 		
+		SimulationContext.logMessage(this.getClass(), Level.INFO, "Sample Farm:\n"+r.values().iterator().next().toString());
+		
+		
 		//return
 		return r;
 	}
@@ -102,25 +104,58 @@ public class ExcelDataLoader implements DataLoader {
 	private void loadFarmData(ArrayListMultimap<Integer,Farm> fs) {
 		
 		//load surface
-		Sheet sh = this.excelWB.getSheet("initialSurface");
+		Sheet sh_surf = this.excelWB.getSheet("initialSurface");
+		Sheet sh_varcost = this.excelWB.getSheet("varcost");
+		Sheet sh_yield = this.excelWB.getSheet("yield");
 		
-		Table<String,String,String> t = Utility.convertExcelToTable(sh);
-		//SimulationContext.logMessage(this.getClass(), Level.DEBUG, t.toString());
+		Table<String,String,String> t_surf = Utility.convertExcelToTable(sh_surf);
+		Table<String,String,String> t_marg = Utility.convertExcelToTable(sh_varcost);
+		Table<String,String,String> t_yield = Utility.convertExcelToTable(sh_yield);
+		//SimulationContext.logMessage(this.getClass(), Level.DEBUG, t_surf.toString());
+		
 		
 		for(Farm f: fs.values()) {
-			Map<String,String> row =  t.row(String.valueOf(f.getId()));
-			for(ArableCrop ac: SimulationContext.getInstance().getCrops().getAll()) {
-				Float v;
-				v = Float.parseFloat(row.get(ac.getName()));
-				f.getCurSurface().put(ac, v);
+			Map<String,String> row_surf =  t_surf.row(String.valueOf(f.getId()));
+			Map<String,String> row_varcost =  t_marg.row(String.valueOf(f.getId()));
+			Map<String,String> row_yield =  t_yield.row(String.valueOf(f.getId()));
+			//SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Row: " + row.toString());
+			if(! row_surf.isEmpty()) {
+				for(ArableCrop ac: SimulationContext.getInstance().getCrops().getAll()) {
+					Float v_surf,v_varcost,v_yield;
+					v_surf=cleanFloat(row_surf.get(ac.getName()));
+					v_varcost=cleanFloat(row_varcost.get(ac.getName()));
+					v_yield=cleanFloat(row_yield.get(ac.getName()));
+					
+					f.getCurSurface().put(ac, v_surf);
+					f.getVarCost().put(ac, v_varcost);
+					f.getYield().put(ac, v_yield);
+				}
 			}
+			
+			
 		}
 		
 	}
 	
 
+	private Float cleanFloat(String s) {
+		Float f;
+		try {
+			f = Float.parseFloat(s);
+		}
+		catch(NumberFormatException e) {
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Could not convert'" + s + "' to float");
+			f = 0f;
+		}
+		catch(Exception e) {
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "An Exception was raised for '" + s + "': " + e.toString());
+			f = 0f;
+		}
+		
+		return f;
+	}
 
 	
-} //end inner class
+} //end  class
 
 
