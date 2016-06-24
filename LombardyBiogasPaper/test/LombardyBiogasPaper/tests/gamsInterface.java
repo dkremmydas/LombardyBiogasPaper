@@ -1,6 +1,4 @@
 package LombardyBiogasPaper.tests;
-import java.nio.file.Paths;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -36,5 +34,25 @@ public class gamsInterface {
         }
 		
 	}
-
+	
+	@Test
+	public void runArableModel() {
+		//System.out.println(System.getProperty("java.io.tmpdir"));
+		GAMSWorkspaceInfo ginfo = new GAMSWorkspaceInfo("C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm", 
+				"C:\\GAMS\\win64\\24.0",
+				false);
+		GAMSWorkspace ws = new GAMSWorkspace(ginfo);
+		
+		GAMSJob t1 = ws.addJobFromFile("arableFarmModel.gms");    
+        t1.run(); 
+        
+        System.out.println("Ran with Default:");
+        GAMSVariable x = t1.OutDB().getVariable("mcult");
+        for (GAMSVariableRecord rec :  x) {
+            System.out.print("mcult(" + rec.getKeys()[0] + ", " + rec.getKeys()[1] + "):");
+            System.out.print(", level    = " + rec.getLevel());
+            System.out.println(", marginal = " + rec.getMarginal());
+        }
+		
+	}
 }
