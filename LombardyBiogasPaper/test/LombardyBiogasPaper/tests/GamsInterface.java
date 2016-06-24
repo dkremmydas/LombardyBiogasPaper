@@ -9,7 +9,7 @@ import com.gams.api.GAMSWorkspace;
 import com.gams.api.GAMSWorkspaceInfo;
 
 
-public class gamsInterface {
+public class GamsInterface {
 
 	@Before
 	public void setUp() throws Exception {

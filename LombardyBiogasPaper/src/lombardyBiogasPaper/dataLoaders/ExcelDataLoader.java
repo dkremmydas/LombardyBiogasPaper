@@ -3,6 +3,7 @@ package lombardyBiogasPaper.dataLoaders;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -112,8 +113,9 @@ public class ExcelDataLoader implements DataLoader {
 		Table<String,String,String> t_marg = Utility.convertExcelToTable(sh_varcost);
 		Table<String,String,String> t_yield = Utility.convertExcelToTable(sh_yield);
 		//SimulationContext.logMessage(this.getClass(), Level.DEBUG, t_surf.toString());
+		HashMap<Integer,Float> tl = this.loadTotalLand(this.excelWB.getSheet("totalLand"));
 		
-		
+		//load 
 		for(Farm f: fs.values()) {
 			Map<String,String> row_surf =  t_surf.row(String.valueOf(f.getId()));
 			Map<String,String> row_varcost =  t_marg.row(String.valueOf(f.getId()));
@@ -129,12 +131,26 @@ public class ExcelDataLoader implements DataLoader {
 					f.getCurSurface().put(ac, v_surf);
 					f.getVarCost().put(ac, v_varcost);
 					f.getYield().put(ac, v_yield);
+					f.setTotalLand(tl.get(f.getId()));
 				}
 			}
 			
 			
 		}
 		
+	}
+	
+	private HashMap<Integer,Float> loadTotalLand(Sheet sh) {
+		HashMap<Integer,Float> r = new HashMap<>();
+		Iterator<Row> rowItr = sh.iterator(); 
+		rowItr.next(); //skip first row
+		while(rowItr.hasNext()) {
+			Row row = rowItr.next();
+			int farm_id = (int)row.getCell(0).getNumericCellValue();
+			float land = (float)row.getCell(1).getNumericCellValue();	
+			r.put(farm_id,land);
+		}
+		return r;
 	}
 	
 

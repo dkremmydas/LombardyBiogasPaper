@@ -1,8 +1,14 @@
 package lombardyBiogasPaper.utilities;
 
+import java.util.HashMap;
+
+import lombardyBiogasPaper.agents.Farm;
+
 import com.gams.api.GAMSDatabase;
+import com.gams.api.GAMSJob;
 import com.gams.api.GAMSWorkspace;
 import com.gams.api.GAMSWorkspaceInfo;
+import com.google.common.collect.Table;
 
 /**
  * Collects data from agents, creates matrix and calls gams software to solve the LP
@@ -20,16 +26,21 @@ public class SolveProductionDecision {
 	
 	private String modelFile="arableFarmModel.gms";
 	
-	private GAMSDatabase db;
+	private Table farmSurfaces, farmYields, farmVarCosts;
+	private HashMap<Farm,Float> totalLand;
+	
+	private GAMSDatabase db; private GAMSJob job;
 
 	public SolveProductionDecision() {
-		this.db = ws.addDatabase();
+		this.db = ws.addDatabase("farmData");
 	}
 	
 	
 	
 	
-	private buildYields
+	private void buildYieldParameter() {
+		
+	}
 	
 	
 }
