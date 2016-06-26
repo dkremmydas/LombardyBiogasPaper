@@ -2,6 +2,8 @@ package lombardyBiogasPaper.utilities;
 
 import java.util.Vector;
 
+import org.apache.log4j.Level;
+
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.Farm;
 import lombardyBiogasPaper.agents.Municipality;
@@ -33,29 +35,33 @@ public class SolveProductionDecision {
 	private String modelFile="arableFarmModel.Java.gms";
 	
 	
-	private GAMSDatabase db; private GAMSJob job;
+	private GAMSDatabase db, dbResults; private GAMSJob job;
 
 	public SolveProductionDecision() {
 		this.db = ws.addDatabase("farmData");
-		System.out.println("Building Parameters");
+		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Building Parameters from Farms");
 		this.buildYieldParameter();
 		this.totalLandParameter();
+		this.buildVarCostParameter();
 		this.job = ws.addJobFromFile(modelFile);
         GAMSOptions opt = ws.addOptions();
         opt.defines("gdxincname", db.getName());
-        System.out.println("Running Job");
+        SimulationContext.logMessage(this.getClass(), Level.DEBUG, "finished... Running Job");
         this.job.run(opt, db);
-        System.out.println("Finished Job");
-
-        GAMSVariable var = this.job.OutDB().getVariable("mcult");
-        for(GAMSVariableRecord rec : var) 
-        	System.out.println("mcult(" + rec.getKeys()[0] + ", " + rec.getKeys()[1] + "): level=" + rec.getLevel() + " marginal=" + rec.getMarginal());
-        System.out.println();
+        this.dbResults = this.job.OutDB();
+        SimulationContext.logMessage(this.getClass(), Level.DEBUG, "finished...");
 	}
 	
 
+	public GAMSDatabase retrieveResults() {
+		return this.dbResults;
+	}
 
 
+	public void updateFarmLandUse() {
+		
+	}
+	
 
 	private  void buildYieldParameter() {
 		GAMSParameter r = this.db.addParameter("yield", 2, "the yield of each crop for a farm (the old rendt) (tn/ha)");
@@ -66,6 +72,23 @@ public class SolveProductionDecision {
 						 Vector<String> v = new Vector<>(2); 
 						 v.add(f.getName());v.add(c.getName());
 						 r.addRecord(v).setValue(Double.valueOf(f.getYield().get(c)));
+					 }
+					
+				 }
+				
+			 }
+		}
+	}
+	
+	private  void buildVarCostParameter() {
+		GAMSParameter r = this.db.addParameter("varcost", 2, "the variable cost of each crop per farm per hectare (euros/ha)");
+		for(Municipality m: SimulationContext.getInstance().getMunicipalities()) {
+			 for(Farm f: m.getAgentLayer(Farm.class)) {
+				 for(ArableCrop c: f.getVarCost().keySet()) {
+					 if(f.getYield().get(c).compareTo(0.0f)==1) {
+						 Vector<String> v = new Vector<>(2); 
+						 v.add(f.getName());v.add(c.getName());
+						 r.addRecord(v).setValue(Double.valueOf(f.getVarCost().get(c)));
 					 }
 					
 				 }
