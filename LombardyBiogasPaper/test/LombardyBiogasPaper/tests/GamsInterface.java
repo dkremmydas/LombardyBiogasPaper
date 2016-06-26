@@ -44,6 +44,7 @@ public class GamsInterface {
 		GAMSWorkspace ws = new GAMSWorkspace(ginfo);
 		
 		GAMSJob t1 = ws.addJobFromFile("arableFarmModel.gms");    
+		
         t1.run(); 
         
         System.out.println("Ran with Default:");

@@ -95,7 +95,7 @@ public class ExcelDataLoader implements DataLoader {
 		//load farm data
 		this.loadFarmData(r);
 		
-		SimulationContext.logMessage(this.getClass(), Level.INFO, "Sample Farm:\n"+r.values().iterator().next().toString());
+		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Sample Farm:\n"+r.values().iterator().next().toString());
 		
 		
 		//return
