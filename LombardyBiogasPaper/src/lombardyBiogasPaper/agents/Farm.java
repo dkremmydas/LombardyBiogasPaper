@@ -21,7 +21,7 @@ public class Farm  {
 	/**
 	 * PriceExpectationRule
 	 */
-	private PriceExpectations priceExp;
+	private PriceExpectations priceExp = new PriceExpectations();
 	
 	/**
 	 * The current allocated production area for each arableCrop
@@ -90,8 +90,14 @@ public class Farm  {
 		this.totalLand = totalLand;
 	}
 
+	public PriceExpectations getPriceExpectationObject() {
+		return priceExp;
+	}
 	
-	
+	public HashMap<ArableCrop, Long> getPriceExpectationSnapshot() {
+		return priceExp.getExpectations();
+	}
+
 	
 
 }
