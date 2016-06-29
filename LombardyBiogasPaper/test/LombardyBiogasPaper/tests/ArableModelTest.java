@@ -41,5 +41,14 @@ public class ArableModelTest {
 		final long elapsedTimeMillis = System.currentTimeMillis() - startTime;
 		System.out.println(elapsedTimeMillis/1000);
 	}
+	
+	@Test
+	public void ProductionCycle() {
+		final long startTime = System.currentTimeMillis(); System.out.println(startTime);
+		SolveProductionDecision solve = new SolveProductionDecision();				
+		solve.retrieveResults()
+		final long elapsedTimeMillis = System.currentTimeMillis() - startTime;
+		System.out.println(elapsedTimeMillis/1000);
+	}
 
 }

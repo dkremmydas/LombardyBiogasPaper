@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-import lombardyBiogasPaper.agents.Farm;
 import lombardyBiogasPaper.agents.Municipality;
+import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
 

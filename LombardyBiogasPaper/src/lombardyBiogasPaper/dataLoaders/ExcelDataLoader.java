@@ -8,8 +8,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
-import lombardyBiogasPaper.agents.Farm;
 import lombardyBiogasPaper.agents.Municipality;
+import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.utilities.Utility;
