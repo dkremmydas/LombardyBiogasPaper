@@ -2,12 +2,11 @@ package lombardyBiogasPaper.dataLoaders;
 
 import java.util.ArrayList;
 
-import com.google.common.collect.ArrayListMultimap;
-
-import lombardyBiogasPaper.agents.Farm;
 import lombardyBiogasPaper.agents.Municipality;
-import lombardyBiogasPaper.crops.ArableCrop;
+import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
+
+import com.google.common.collect.ArrayListMultimap;
 
 /**
  * Interface for Data Loaders <br />
@@ -28,7 +27,7 @@ public interface DataLoader {
 	 * Returns the available crops of the simulation
 	 * @return
 	 */
-	ArrayList<ArableCrop> getAvailableCrops();
+	AvailableArableCrops getAvailableCrops();
 	
 	/**
 	 * Returns a MultiMap (municipality_id->Farm) of the available farms of the simulation

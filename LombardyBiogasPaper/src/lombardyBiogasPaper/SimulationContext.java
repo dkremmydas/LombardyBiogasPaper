@@ -6,22 +6,21 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-import lombardyBiogasPaper.agents.Farm;
 import lombardyBiogasPaper.agents.Municipality;
-import lombardyBiogasPaper.crops.ArableCrop;
+import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
 
 import org.apache.log4j.Level;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
-import com.google.common.collect.ArrayListMultimap;
-
 import repast.simphony.context.Context;
 import repast.simphony.context.DefaultContext;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
 import simphony.util.messages.MessageCenter;
+
+import com.google.common.collect.ArrayListMultimap;
 
 
 public class SimulationContext extends DefaultContext<Object> implements ContextBuilder<Object> {
@@ -61,6 +60,10 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 		return crops;
 	}
 
+	public void setCrops(AvailableArableCrops crops) {
+		this.crops = crops;
+	}
+
 	/**
 	 * It builds the Contexts of Agroscape. <br />
 	 * The steps that this method does, are: <br />
@@ -84,8 +87,7 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Municipalities Loaded. \nSimulationContext contains:\n"+this.toString());
 			
 			//load crops			
-			ArrayList<ArableCrop> cs = edl.getAvailableCrops();
-			for(ArableCrop c: cs) {SimulationContext.getInstance().getCrops().add(c);}
+			SimulationContext.getInstance().setCrops(edl.getAvailableCrops());
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Crops Loaded. \nSimulationContext contains:\n"+this.getCrops().toString());
 			
 			//load farms

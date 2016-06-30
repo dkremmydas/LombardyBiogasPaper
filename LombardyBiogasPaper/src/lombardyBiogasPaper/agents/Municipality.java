@@ -1,5 +1,6 @@
 package lombardyBiogasPaper.agents;
 
+import lombardyBiogasPaper.agents.farms.Farm;
 import repast.simphony.context.DefaultContext;
 
 public class Municipality extends DefaultContext<Farm> {

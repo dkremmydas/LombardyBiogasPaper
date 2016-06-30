@@ -8,9 +8,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
-import lombardyBiogasPaper.agents.Farm;
 import lombardyBiogasPaper.agents.Municipality;
+import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.crops.ArableCrop;
+import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.utilities.Utility;
 
 import org.apache.log4j.Level;
@@ -57,9 +58,9 @@ public class ExcelDataLoader implements DataLoader {
 	}
 
 	@Override
-	public ArrayList<ArableCrop> getAvailableCrops() {
+	public AvailableArableCrops getAvailableCrops() {
 		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Loading Crops");
-		ArrayList<ArableCrop> r = new ArrayList<>();
+		AvailableArableCrops r = new AvailableArableCrops();
 		Sheet sh = this.excelWB.getSheet("crops");
 		Iterator<Row> rowItr = sh.iterator(); 
 		rowItr.next(); //skip first row
@@ -68,8 +69,9 @@ public class ExcelDataLoader implements DataLoader {
 			int id = (int)row.getCell(0).getNumericCellValue();	
 			String name = row.getCell(1).getStringCellValue();
 			String originalName = row.getCell(2).getStringCellValue();	
+			Long price = (long)(row.getCell(3).getNumericCellValue());
 			ArableCrop c = new ArableCrop(id, name, originalName);
-			r.add(c);
+			r.add(c,price);
 		}
 		return r;
 	}
