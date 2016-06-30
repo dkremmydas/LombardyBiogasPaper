@@ -38,7 +38,9 @@ public class GamsInterface {
 	@Test
 	public void runArableModel() {
 		//System.out.println(System.getProperty("java.io.tmpdir"));
-		GAMSWorkspaceInfo ginfo = new GAMSWorkspaceInfo("C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm", 
+		GAMSWorkspaceInfo ginfo = new GAMSWorkspaceInfo("C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\"
+				+ "03. Work on progress\\Lombardy Biogas ABM\\model"
+				+ "\\arableFarm", 
 				"C:\\GAMS\\win64\\24.0",
 				false);
 		GAMSWorkspace ws = new GAMSWorkspace(ginfo);
