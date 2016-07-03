@@ -2,6 +2,7 @@ package LombardyBiogasPaper.tests;
 
 import lombardyBiogasPaper.SimulationContext;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,6 +27,7 @@ public class SimulationContextTest {
 		RunEnvironment . init ( schedule , new DefaultScheduleRunner(), p , true );
 		sc = new SimulationContext();
 		sc = (SimulationContext) sc.build(new DefaultContext<Object>());
+		RunEnvironment.getInstance().getCurrentSchedule().schedule(sc);
 	}
 
 	@Test
@@ -33,19 +35,34 @@ public class SimulationContextTest {
 		System.out.println(sc);
 	}
 	
+	@Test
+	public void availableCropsLoaded() {
+		System.out.println(sc.getCrops());
+	}
+	
 	/**
 	 * Does the {@link SimulationContextTest#yearTickCount()} works well ?
 	 */
 	@Test
 	public void yearTickCount() {
-		System.out.println("Year count: " + sc.getCurrentYear());
+		System.out.println("# Scheduled Actions: " + RunEnvironment.getInstance().getCurrentSchedule().getActionCount());
+		
+		System.out.println("Year count: " + sc.getCurrentYear() + " Scheduled tick:" + RunEnvironment.getInstance().getCurrentSchedule().getTickCount());
 		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
-		System.out.println("Year count: " + sc.getCurrentYear());
+		
+		System.out.println("Year count: " + sc.getCurrentYear() + " Scheduled tick:" + RunEnvironment.getInstance().getCurrentSchedule().getTickCount());
 		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
-		System.out.println("Year count: " + sc.getCurrentYear());
+		
+		System.out.println("Year count: " + sc.getCurrentYear() + " Scheduled tick:" + RunEnvironment.getInstance().getCurrentSchedule().getTickCount());
 		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
-		System.out.println("Year count: " + sc.getCurrentYear());
+		
+		System.out.println("Year count: " + sc.getCurrentYear() + " Scheduled tick:" + RunEnvironment.getInstance().getCurrentSchedule().getTickCount());
 		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
+		
+		System.out.println("Year count: " + sc.getCurrentYear() + " Scheduled tick:" + RunEnvironment.getInstance().getCurrentSchedule().getTickCount());
+		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
+		
+		Assert.assertEquals(sc.getCurrentYear(),4);
 	}
 	
 	

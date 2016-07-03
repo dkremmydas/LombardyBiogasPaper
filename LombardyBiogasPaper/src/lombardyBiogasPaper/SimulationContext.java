@@ -30,7 +30,7 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	
 	private AvailableArableCrops crops = new AvailableArableCrops();
 	
-	private int yearCount = 0;
+	private int yearCount = -1;
 
 	
 	/**

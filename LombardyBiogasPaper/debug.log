@@ -35,3 +35,297 @@ Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
 	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
 	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:31:59,648 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:31:59,657 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:31:59,658 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:31:59,704 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:32:44,474 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:32:44,475 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:32:44,475 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:32:44,557 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:33:08,077 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:33:08,077 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:33:08,078 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:33:08,117 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:34:51,775 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:34:51,776 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:34:51,776 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:34:51,809 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:36:23,578 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:36:23,579 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:36:23,580 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:36:23,594 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:41:06,981 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:41:06,983 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:41:06,983 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:41:07,057 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:41:49,444 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:41:49,445 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:41:49,446 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+FATAL [AWT-EventQueue-0] 2016-07-04 00:41:49,533 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: com/gams/api/GAMSDatabase
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.privateGetPublicMethods(Unknown Source)
+	at java.lang.Class.getMethods(Unknown Source)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:41)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:149)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.gams.api.GAMSDatabase
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 30 more
+WARN  [AWT-EventQueue-0] 2016-07-04 00:43:00,422 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:43:00,423 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:43:00,423 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-07-04 00:44:40,716 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:44:40,717 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:44:40,717 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-07-04 00:45:11,619 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:45:11,620 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:45:11,621 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-07-04 00:48:03,077 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:48:03,078 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:48:03,079 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-07-04 00:49:44,036 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:49:44,038 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:49:44,038 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-07-04 00:50:39,581 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:50:39,582 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:50:39,583 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D
+WARN  [AWT-EventQueue-0] 2016-07-04 00:51:47,367 repast.simphony.engine.environment.ProjectionRegistry - Duplicate projection typegeography
+WARN  [AWT-EventQueue-0] 2016-07-04 00:51:47,369 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS
+WARN  [AWT-EventQueue-0] 2016-07-04 00:51:47,369 repast.simphony.visualization.engine.VisualizationRegistry - Duplicate visualization typeGIS 3D

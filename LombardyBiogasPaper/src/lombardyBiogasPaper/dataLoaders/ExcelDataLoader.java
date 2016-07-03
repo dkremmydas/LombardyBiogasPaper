@@ -64,6 +64,7 @@ public class ExcelDataLoader implements DataLoader {
 		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Loading Crops");
 		AvailableArableCrops r = new AvailableArableCrops();
 		Sheet sh = this.excelWB.getSheet("crops");
+		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "sheets crops:" + sh);
 		Iterator<Row> rowItr = sh.iterator(); 
 		rowItr.next(); //skip first row
 		while(rowItr.hasNext()) {
@@ -73,7 +74,9 @@ public class ExcelDataLoader implements DataLoader {
 			String originalName = row.getCell(2).getStringCellValue();	
 			Long price = (long)(row.getCell(3).getNumericCellValue());
 			ArableCrop c = new ArableCrop(id, name, originalName);
-			initPrices.put(c,price);
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "created crop:" + c);
+			r.add(c);
+			this.initPrices.put(c,price);
 		}
 		return r;
 	}
