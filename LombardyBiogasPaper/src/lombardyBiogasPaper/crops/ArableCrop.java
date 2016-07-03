@@ -18,6 +18,11 @@ public class ArableCrop {
 	 */
 	private String originalName;
 	
+	/**
+	 * Capital requirements per hectare in a base case (euro/ha)
+	 */
+	private int capitalRequirements = 10;
+	
 	
 	public ArableCrop(int id, String name, String originalName) {
 		super();

@@ -1,8 +1,6 @@
 package LombardyBiogasPaper.tests;
 
 import lombardyBiogasPaper.SimulationContext;
-import lombardyBiogasPaper.realityGenerators.RealityGenerator;
-import lombardyBiogasPaper.utilities.SolveProductionDecision;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +11,8 @@ import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.parameter.DefaultParameters;
 
-public class ArableModelTest {
+
+public class SimulationContextTest {
 	
 	public SimulationContext sc;
 
@@ -34,30 +33,20 @@ public class ArableModelTest {
 		System.out.println(sc);
 	}
 	
+	/**
+	 * Does the {@link SimulationContextTest#yearTickCount()} works well ?
+	 */
 	@Test
-	public void gamsExecution() {
-		final long startTime = System.currentTimeMillis(); System.out.println(startTime);
-		SolveProductionDecision solve = new SolveProductionDecision();				
-		System.out.println(solve.toString());
-		final long elapsedTimeMillis = System.currentTimeMillis() - startTime;
-		System.out.println(elapsedTimeMillis/1000);
+	public void yearTickCount() {
+		System.out.println("Year count: " + sc.getCurrentYear());
+		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
+		System.out.println("Year count: " + sc.getCurrentYear());
+		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
+		System.out.println("Year count: " + sc.getCurrentYear());
+		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
+		System.out.println("Year count: " + sc.getCurrentYear());
+		System.out.println("advance"); RunEnvironment.getInstance().getCurrentSchedule().execute();
 	}
 	
-	@Test
-	public void ProductionCycle() {
-		final long startTime = System.currentTimeMillis(); System.out.println(startTime);
-		
-		SolveProductionDecision solve = new SolveProductionDecision();				
-		solve.updateFarmLandUse();
-		
-		RealityGenerator pr = new RealityGenerator();
-		pr.realizeProduction();
-		
-		
-		
-		
-		final long elapsedTimeMillis = System.currentTimeMillis() - startTime;
-		System.out.println(elapsedTimeMillis/1000);
-	}
-
+	
 }

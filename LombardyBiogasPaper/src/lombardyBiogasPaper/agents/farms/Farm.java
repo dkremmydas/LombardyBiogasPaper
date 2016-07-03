@@ -2,7 +2,6 @@ package lombardyBiogasPaper.agents.farms;
 
 import java.util.HashMap;
 
-import lombardyBiogasPaper.agents.PriceExpectations;
 import lombardyBiogasPaper.crops.ArableCrop;
 
 
@@ -27,7 +26,7 @@ public class Farm  {
 	/**
 	 * The current allocated production area for each arableCrop
 	 */
-	private HashMap<ArableCrop,Float> curSurface = new HashMap<>();
+	private HashMap<ArableCrop,Float> cropPlan = new HashMap<>();
 	
 	/**
 	 * The expected yields for each arableCrop
@@ -65,15 +64,15 @@ public class Farm  {
 	public String toString() {
 		String r = "Farm [code=" + id + ", name=" + name ;
 		r += "\nTotal Land: [" + totalLand + "]";
-		r += "\nCurrent Crop Allocation: [" + curSurface.toString() + "]";
+		r += "\nCurrent Crop Allocation: [" + cropPlan.toString() + "]";
 		r += "\nCurrent Yields Expectations: [" + yield.toString() + "]";
 		r += "\nCurrent VarCosts Expectations: [" + varcost.toString() + "]";
 		
 		return r + "\n]";
 	}
 
-	public HashMap<ArableCrop, Float> getCurSurface() {
-		return curSurface;
+	public HashMap<ArableCrop, Float> getCropPlan() {
+		return cropPlan;
 	}
 	
 	public HashMap<ArableCrop, Float> getYield() {
@@ -111,6 +110,7 @@ public class Farm  {
 	public FarmerAccounting getAccount() {
 		return account;
 	}
+
 
 	
 

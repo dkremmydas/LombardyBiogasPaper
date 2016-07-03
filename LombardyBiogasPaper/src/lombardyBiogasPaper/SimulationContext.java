@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-import lombardyBiogasPaper.agents.Municipality;
 import lombardyBiogasPaper.agents.farms.Farm;
+import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
 
@@ -18,6 +18,7 @@ import repast.simphony.context.Context;
 import repast.simphony.context.DefaultContext;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.engine.schedule.ScheduledMethod;
 import simphony.util.messages.MessageCenter;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -28,6 +29,8 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	private static SimulationContext instance=null;
 	
 	private AvailableArableCrops crops = new AvailableArableCrops();
+	
+	private int yearCount = 0;
 
 	
 	/**
@@ -63,6 +66,10 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	public void setCrops(AvailableArableCrops crops) {
 		this.crops = crops;
 	}
+	
+	public int getCurrentYear() {
+		return this.yearCount;
+	}
 
 	/**
 	 * It builds the Contexts of Agroscape. <br />
@@ -70,7 +77,6 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	 * 1. //TODO complete documentation
 	 * 
 	 */
-
 	@Override
 	public Context<Object> build(Context<Object> context)  {
 		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Start building SimulationContext");
@@ -81,14 +87,14 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 			ExcelDataLoader edl = new ExcelDataLoader(dataFile);
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Loading from Excel file"+dataFile);
 			
+			//load crops			
+			SimulationContext.getInstance().setCrops(edl.getAvailableCrops());
+			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Crops Loaded. \nSimulationContext contains:\n"+this.getCrops().toString());
+			
 			//load municipalities
 			ArrayList<Municipality> ms = edl.getMunicipalities();
 			for(Municipality m: ms) {SimulationContext.getInstance().addSubContext(m);}
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Municipalities Loaded. \nSimulationContext contains:\n"+this.toString());
-			
-			//load crops			
-			SimulationContext.getInstance().setCrops(edl.getAvailableCrops());
-			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Crops Loaded. \nSimulationContext contains:\n"+this.getCrops().toString());
 			
 			//load farms
 			ArrayListMultimap<Integer,Farm> fs = edl.getFarms();
@@ -142,6 +148,15 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 		r +="] ]";
 		
 		return r;
+	}
+	
+	
+	@ScheduledMethod(start=0,interval=1)
+	public void step() {
+		//advance year count
+		this.yearCount++;
+		
+		
 	}
 
 	

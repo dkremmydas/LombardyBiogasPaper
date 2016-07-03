@@ -11,8 +11,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.text.DecimalFormat;
 
 import lombardyBiogasPaper.SimulationContext;
-import lombardyBiogasPaper.agents.Municipality;
 import lombardyBiogasPaper.agents.farms.Farm;
+import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 
 import org.apache.log4j.Level;
@@ -91,7 +91,7 @@ public class SolveProductionDecision {
 		for(Municipality m: SimulationContext.getInstance().getMunicipalities()) {
 			 for(Farm f: m.getAgentLayer(Farm.class)) {
 				 for(ArableCrop c: cs) {
-						f.getCurSurface().put(c, this.solutionResults.get(f.getName(), c.getName()));
+						f.getCropPlan().put(c, this.solutionResults.get(f.getName(), c.getName()));
 				};
 			 }
 		}

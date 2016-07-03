@@ -1,4 +1,4 @@
-package lombardyBiogasPaper.agents;
+package lombardyBiogasPaper.agents.farms;
 
 import java.util.HashMap;
 
@@ -25,7 +25,7 @@ public class PriceExpectations {
 	
 	private void initExpecations() {
 		AvailableArableCrops cs = SimulationContext.getInstance().getCrops();
-		expectations = cs.getPrices();
+		//expectations = cs.getPrices();
 		/**
 		 * 	ofc	150
 			ogl	120

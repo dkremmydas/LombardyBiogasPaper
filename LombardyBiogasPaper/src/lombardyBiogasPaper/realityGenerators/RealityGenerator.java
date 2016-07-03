@@ -1,21 +1,22 @@
-package lombardyBiogasPaper.agents;
+package lombardyBiogasPaper.realityGenerators;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
+import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import repast.simphony.random.RandomHelper;
 
-public class ProductionRealization {
+public class RealityGenerator {
 
 	private HashMap<ArableCrop, Long> lastPrices = new HashMap<>();
 	private HashMap<ArableCrop, Float> lastYields = new HashMap<>();
 	
 
-	public ProductionRealization() {
+	public RealityGenerator() {
 		this.realizeProduction();
 	}
 
@@ -24,7 +25,8 @@ public class ProductionRealization {
 	 */
 	public void realizeProduction() {
 		this._realizePrices();
-		this._realizeYields();		
+		this._realizeYields();	
+		this.updateFarmAccounts();
 	}
 	
 	public Map<ArableCrop, Float> getYields() {
@@ -41,8 +43,8 @@ public class ProductionRealization {
 		for(Municipality m: SimulationContext.getInstance().getMunicipalities()) {
 			 for(Farm f: m.getAgentLayer(Farm.class)) {
 				 for(ArableCrop c: cs) {
-					 f.getAccount().addCash(f.getCurSurface().get(c)*this.lastPrices.get(c));
-					 f.getAccount().removeCash(f.getCurSurface().get(c)*SimulationContext.getInstance().getCrops().g);
+					 f.getAccount().addCash((long)(f.getCropPlan().get(c)*this.lastPrices.get(c)));
+					 f.getAccount().removeCash((long)(f.getCropPlan().get(c)*f.getVarCost().get(c)));
 				};
 			 }
 		}
@@ -77,7 +79,10 @@ public class ProductionRealization {
 
 		Iterable<ArableCrop> cs =  SimulationContext.getInstance().getCrops().getAll();
 		for(ArableCrop c: cs) {
-			this.lastYields.put(c, baseYields.get(c)* (1 + RandomHelper.nextIntFromTo(-50,50) / 100) );
+			if(lastYields.containsKey(c)) {
+				this.lastYields.put(c, baseYields.get(c)* (1 + RandomHelper.nextIntFromTo(-50,50) / 100) );
+			}
+			else this.lastYields.put(c,0f);
 		}
 	}
 	
@@ -108,7 +113,11 @@ public class ProductionRealization {
 
 		Iterable<ArableCrop> cs =  SimulationContext.getInstance().getCrops().getAll();
 		for(ArableCrop c: cs) {
-			this.lastPrices.put(c, basePrices.get(c)* (1 + RandomHelper.nextIntFromTo(-50,50) / 100) );
+			if(basePrices.containsKey(c)) {
+				this.lastPrices.put(c, basePrices.get(c)* (1 + RandomHelper.nextIntFromTo(-50,50) / 100) );
+			}
+			else 
+				this.lastPrices.put(c,0l);
 		}
 
 	}

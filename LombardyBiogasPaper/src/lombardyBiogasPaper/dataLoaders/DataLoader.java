@@ -2,8 +2,8 @@ package lombardyBiogasPaper.dataLoaders;
 
 import java.util.ArrayList;
 
-import lombardyBiogasPaper.agents.Municipality;
 import lombardyBiogasPaper.agents.farms.Farm;
+import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 
 import com.google.common.collect.ArrayListMultimap;

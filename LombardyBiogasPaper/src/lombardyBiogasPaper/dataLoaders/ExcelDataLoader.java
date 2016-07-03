@@ -8,8 +8,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
-import lombardyBiogasPaper.agents.Municipality;
 import lombardyBiogasPaper.agents.farms.Farm;
+import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.utilities.Utility;
@@ -27,6 +27,8 @@ import com.google.common.collect.Table;
 public class ExcelDataLoader implements DataLoader {
 	
 	private Workbook excelWB; 
+	
+	private HashMap<ArableCrop,Long> initPrices = new HashMap<>();
 	
 	
 	/**
@@ -52,7 +54,7 @@ public class ExcelDataLoader implements DataLoader {
 			Row row = rowItr.next();
 			String name = row.getCell(0).getStringCellValue();
 			int id = (int)row.getCell(1).getNumericCellValue();		
-			r.add( new Municipality(id, name) );
+			r.add( new Municipality(id, name, this.initPrices) );
 		}
 		return r;
 	}
@@ -71,7 +73,7 @@ public class ExcelDataLoader implements DataLoader {
 			String originalName = row.getCell(2).getStringCellValue();	
 			Long price = (long)(row.getCell(3).getNumericCellValue());
 			ArableCrop c = new ArableCrop(id, name, originalName);
-			r.add(c,price);
+			initPrices.put(c,price);
 		}
 		return r;
 	}
@@ -130,7 +132,7 @@ public class ExcelDataLoader implements DataLoader {
 					v_varcost=cleanFloat(row_varcost.get(ac.getName()));
 					v_yield=cleanFloat(row_yield.get(ac.getName()));
 					
-					f.getCurSurface().put(ac, v_surf);
+					f.getCropPlan().put(ac, v_surf);
 					f.getVarCost().put(ac, v_varcost);
 					f.getYield().put(ac, v_yield);
 					f.setTotalLand(tl.get(f.getId()));
