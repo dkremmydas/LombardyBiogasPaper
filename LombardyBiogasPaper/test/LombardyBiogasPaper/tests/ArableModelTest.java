@@ -1,8 +1,8 @@
 package LombardyBiogasPaper.tests;
 
 import lombardyBiogasPaper.SimulationContext;
+import lombardyBiogasPaper.productionDecisionCollectors.ProductionDecisionCollector;
 import lombardyBiogasPaper.realityGenerators.RealityGenerator;
-import lombardyBiogasPaper.utilities.SolveProductionDecision;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +37,7 @@ public class ArableModelTest {
 	@Test
 	public void gamsExecution() {
 		final long startTime = System.currentTimeMillis(); System.out.println(startTime);
-		SolveProductionDecision solve = new SolveProductionDecision();				
+		ProductionDecisionCollector solve = new ProductionDecisionCollector();				
 		System.out.println(solve.toString());
 		final long elapsedTimeMillis = System.currentTimeMillis() - startTime;
 		System.out.println(elapsedTimeMillis/1000);
@@ -47,7 +47,7 @@ public class ArableModelTest {
 	public void ProductionCycle() {
 		final long startTime = System.currentTimeMillis(); System.out.println(startTime);
 		
-		SolveProductionDecision solve = new SolveProductionDecision();				
+		ProductionDecisionCollector solve = new ProductionDecisionCollector();				
 		//solve.updateFarmLandUse();
 		
 		RealityGenerator pr = sc.getRealityGenerator();

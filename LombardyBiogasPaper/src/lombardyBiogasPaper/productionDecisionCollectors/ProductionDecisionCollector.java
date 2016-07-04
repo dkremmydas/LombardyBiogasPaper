@@ -1,4 +1,4 @@
-package lombardyBiogasPaper.utilities;
+package lombardyBiogasPaper.productionDecisionCollectors;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,7 +37,7 @@ import com.google.common.io.Files;
  * @author Dimitris Kremmydas
  *
  */
-public class SolveProductionDecision {
+public class ProductionDecisionCollector {
 
 	private GAMSWorkspaceInfo ginfo = new GAMSWorkspaceInfo("C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm", 
 			"C:\\GAMS\\win64\\24.0",
@@ -64,7 +64,7 @@ public class SolveProductionDecision {
 	/**
 	 *  //TODO Documentation
 	 */
-	public SolveProductionDecision() {
+	public ProductionDecisionCollector() {
 		
 	}
 	

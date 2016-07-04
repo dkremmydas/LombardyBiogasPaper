@@ -13,8 +13,8 @@ import lombardyBiogasPaper.agents.farms.PriceExpectations;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
+import lombardyBiogasPaper.productionDecisionCollectors.ProductionDecisionCollector;
 import lombardyBiogasPaper.realityGenerators.RealityGenerator;
-import lombardyBiogasPaper.utilities.SolveProductionDecision;
 import lombardyBiogasPaper.utilities.Utility;
 
 import org.apache.log4j.Level;
@@ -193,7 +193,7 @@ public class ExcelDataLoader implements DataLoader {
 		sc.setRealityGenerator( new RealityGenerator(this.initPrices,this.initYields) );
 		
 		//set production solver
-		sc.setSolveProductionDecision(new SolveProductionDecision());
+		sc.setSolveProductionDecision(new ProductionDecisionCollector());
 		
 	}
 
