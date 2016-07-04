@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.text.DecimalFormat;
+import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
@@ -48,6 +49,9 @@ public class SolveProductionDecision {
 	private String farmDataFilename = "farmData.inc";
 	private String farmData = "";
 	
+	/**
+	 * <Farm,ArableCrop>=Float
+	 */
 	private Table<String, String, Float> solutionResults = HashBasedTable.create();
 	
 	
@@ -61,6 +65,19 @@ public class SolveProductionDecision {
 	 *  //TODO Documentation
 	 */
 	public SolveProductionDecision() {
+		
+	}
+	
+
+	public GAMSDatabase retrieveGamsDBResults() {
+		return this.dbResults;
+	}
+
+	public Table<String, String, Float> retrieveResults() {
+		return this.solutionResults;
+	}
+	
+	public void solve() {
 		this.db = ws.addDatabase("farmData");
 		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Building Parameters from Farms");
 		this.createFarmData();
@@ -74,25 +91,18 @@ public class SolveProductionDecision {
         this.job.run(opt, db);
         this.dbResults = this.job.OutDB();
         this.collectResults();
+        this.updateFarmLandUse();
         SimulationContext.logMessage(this.getClass(), Level.DEBUG, "finished...");
 	}
 	
-
-	public GAMSDatabase retrieveGamsDBResults() {
-		return this.dbResults;
-	}
-
-	public Table<String, String, Float> retrieveResults() {
-		return this.solutionResults;
-	}
-	
-	public void updateFarmLandUse() {
+	private void updateFarmLandUse() {
 		Iterable<ArableCrop> cs =  SimulationContext.getInstance().getCrops().getAll();
 		for(Municipality m: SimulationContext.getInstance().getMunicipalities()) {
-			 for(Farm f: m.getAgentLayer(Farm.class)) {
+			 for(Farm f: m.getAllFarms()) {
+				 Map<String,Float> mp = this.solutionResults.row(f.getName());
 				 for(ArableCrop c: cs) {
-						f.getCropPlan().put(c, this.solutionResults.get(f.getName(), c.getName()));
-				};
+					 f.getCropPlan().put(c, (float)mp.get(c.getName()));
+				 }
 			 }
 		}
 	}
@@ -105,7 +115,7 @@ public class SolveProductionDecision {
 		this.solutionResults.clear();
 		for (GAMSVariableRecord rec : x) {
 		  	this.solutionResults.put(rec.getKeys()[0] , rec.getKeys()[1], (float)rec.getLevel());
-		  }
+		}
 	}
 	
 	private void writeFarmData() {

@@ -11,6 +11,7 @@ import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
 import lombardyBiogasPaper.realityGenerators.RealityGenerator;
+import lombardyBiogasPaper.utilities.SolveProductionDecision;
 
 import org.apache.log4j.Level;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -32,7 +33,9 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	
 	private AvailableArableCrops crops = new AvailableArableCrops();
 	
-	private RealityGenerator realityGenerator = new RealityGenerator();
+	private RealityGenerator realityGenerator; //has to be initialized in the build
+	
+	private SolveProductionDecision solveProductionDecision;
 	
 	private int yearCount = -1;
 
@@ -149,6 +152,21 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	
 	public RealityGenerator getRealityGenerator() {
 		return realityGenerator;
+	}
+
+	public void setRealityGenerator(RealityGenerator realityGenerator) {
+		this.realityGenerator = realityGenerator;
+	}
+	
+	
+
+	public SolveProductionDecision getSolveProductionDecision() {
+		return solveProductionDecision;
+	}
+
+	public void setSolveProductionDecision(
+			SolveProductionDecision solveProductionDecision) {
+		this.solveProductionDecision = solveProductionDecision;
 	}
 
 	@Override

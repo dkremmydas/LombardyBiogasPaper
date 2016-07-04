@@ -14,20 +14,16 @@ import repast.simphony.random.RandomHelper;
  * @author Dimitris Kremmydas
  *
  */
-public class DefaultPriceGenerator implements PriceGenerator {
-
-	private Municipality parentMunicipality;
+public class DefaultGlobalPriceGenerator implements PriceGenerator {
 	
 	private double sigma ; //it is initialized to 0.3f in the constructor
 	
-	public DefaultPriceGenerator(Municipality m) {
-		this(m,0.05d);
+	public DefaultGlobalPriceGenerator() {
+		this(0.05d);
 	}
 	
-	public DefaultPriceGenerator(Municipality m,
-			double sigma) {
+	public DefaultGlobalPriceGenerator(double sigma) {
 		super();
-		this.parentMunicipality = m;
 		this.sigma = sigma;
 	}
 	
@@ -35,12 +31,13 @@ public class DefaultPriceGenerator implements PriceGenerator {
 	@Override
 	public HashMap<ArableCrop,Long> getPrices() {
 		int currentYear = SimulationContext.getInstance().getCurrentYear();
+		Municipality m = SimulationContext.getInstance().getMunicipalities().iterator().next(); //take a random municipality
 		HashMap<ArableCrop,Long> r = new HashMap<>();
 		Iterable<ArableCrop> cs = SimulationContext.getInstance().getCrops().getAll();
 		for(ArableCrop c: cs) {
 			//Double factor = this.normalDistr.nextDouble();
 			Double factor = RandomHelper.getNormal().nextDouble(0,sigma);
-			Long oldVal = this.parentMunicipality.getPriceHistory().get(currentYear-1,c);
+			Long oldVal = SimulationContext.getInstance().getRealityGenerator().getPriceHistory().get(m).get(currentYear-1,c);
 			Long newVal = (long) (oldVal *( 1 + factor));
 			if(newVal.compareTo(1l)<0) {newVal = 2l;} //TODO It should work with compareTo(0l)
 			r.put(c, newVal);

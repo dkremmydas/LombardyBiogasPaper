@@ -9,9 +9,12 @@ import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
+import lombardyBiogasPaper.agents.farms.PriceExpectations;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
+import lombardyBiogasPaper.realityGenerators.RealityGenerator;
+import lombardyBiogasPaper.utilities.SolveProductionDecision;
 import lombardyBiogasPaper.utilities.Utility;
 
 import org.apache.log4j.Level;
@@ -54,7 +57,7 @@ public class ExcelDataLoader implements DataLoader {
 			Row row = rowItr.next();
 			String name = row.getCell(0).getStringCellValue();
 			int id = (int)row.getCell(1).getNumericCellValue();		
-			r.add( new Municipality(id, name, this.initPrices) );
+			r.add( new Municipality(id, name) );
 		}
 		return r;
 	}
@@ -97,7 +100,11 @@ public class ExcelDataLoader implements DataLoader {
 			int farm_id = (int)row.getCell(0).getNumericCellValue();
 			int mun_id = (int)row.getCell(1).getNumericCellValue();	
 			String name = row.getCell(2).getStringCellValue();	
+			//String ismixed = row.getCell(3).getStringCellValue();
+			Long cash = (long)row.getCell(4).getNumericCellValue();
 			Farm f = new Farm(farm_id,name);
+			f.getAccount().addCash(cash);
+			f.setPriceExp(new PriceExpectations(this.initPrices));
 			r.put(mun_id, f);
 		}
 		
@@ -182,8 +189,11 @@ public class ExcelDataLoader implements DataLoader {
 
 	@Override
 	public void setupSimulationContext(SimulationContext sc) {
-		//update initial yields
-		sc.getRealityGenerator().getYields().putAll(this.initYields);
+		//set Reality generator
+		sc.setRealityGenerator( new RealityGenerator(this.initPrices,this.initYields) );
+		
+		//set production solver
+		sc.setSolveProductionDecision(new SolveProductionDecision());
 		
 	}
 

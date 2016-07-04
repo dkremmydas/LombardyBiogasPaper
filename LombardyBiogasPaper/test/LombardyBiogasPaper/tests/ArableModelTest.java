@@ -48,9 +48,9 @@ public class ArableModelTest {
 		final long startTime = System.currentTimeMillis(); System.out.println(startTime);
 		
 		SolveProductionDecision solve = new SolveProductionDecision();				
-		solve.updateFarmLandUse();
+		//solve.updateFarmLandUse();
 		
-		RealityGenerator pr = new RealityGenerator();
+		RealityGenerator pr = sc.getRealityGenerator();
 		//pr.realizeProduction();
 		
 		

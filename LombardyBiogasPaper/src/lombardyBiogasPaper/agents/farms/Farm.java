@@ -21,7 +21,7 @@ public class Farm  {
 	/**
 	 * PriceExpectationRule
 	 */
-	private PriceExpectations priceExp = new PriceExpectations();
+	private PriceExpectations priceExp; //you have to set in constructor
 	
 	/**
 	 * The current allocated production area for each arableCrop
@@ -67,7 +67,7 @@ public class Farm  {
 		r += "\nCurrent Crop Allocation: [" + cropPlan.toString() + "]";
 		r += "\nCurrent Yields Expectations: [" + yield.toString() + "]";
 		r += "\nCurrent VarCosts Expectations: [" + varcost.toString() + "]";
-		
+		r += "\n" + this.account;
 		return r + "\n]";
 	}
 
@@ -111,7 +111,9 @@ public class Farm  {
 		return account;
 	}
 
+	public void setPriceExp(PriceExpectations priceExp) {
+		this.priceExp = priceExp;
+	}
 
 	
-
 }

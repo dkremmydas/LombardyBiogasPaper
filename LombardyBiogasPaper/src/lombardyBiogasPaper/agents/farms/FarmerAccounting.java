@@ -24,43 +24,43 @@ public class FarmerAccounting {
 	
 
 	public void addCash(Long amount) {
-		this.cash =+ amount;
+		this.cash = this.cash + (long)amount;
 	}
 	
 	public void removeCash(Long amount) {
-		this.cash =- amount;
+		this.cash = this.cash - (long) amount;
 	}
 	
 	public void addCropInventory(Long amount) {
-		this.cropInventory =+ amount;
+		this.cropInventory =+ (long)amount;
 	}
 	
 	public void removeCropInventory(Long amount) {
-		this.cropInventory =- amount;
+		this.cropInventory =- (long)amount;
 	}
 	
 	public void addMachinery(Long amount) {
-		this.machinery =+ amount;
+		this.machinery =+ (long)amount;
 	}
 	
 	public void removeMachinery(Long amount) {
-		this.machinery =- amount;
+		this.machinery =- (long)amount;
 	}
 	
 	public void addDebt(Long amount) {
-		this.debts =+ amount;
+		this.debts =+ (long)amount;
 	}
 	
 	public void removeDebt(Long amount) {
-		this.debts =- amount;
+		this.debts =- (long)amount;
 	}
 	
 	public void addEquity(Long amount) {
-		this.equity =+ amount;
+		this.equity =+ (long)amount;
 	}
 	
 	public void removeEquity(Long amount) {
-		this.equity =- amount;
+		this.equity =- (long)amount;
 	}
 
 	public Long getCash() {
@@ -81,6 +81,13 @@ public class FarmerAccounting {
 
 	public Long getEquity() {
 		return equity;
+	}
+
+	@Override
+	public String toString() {
+		return "FarmerAccounting [cash=" + cash + ", cropInventory="
+				+ cropInventory + ", machinery=" + machinery + ", debts="
+				+ debts + ", equity=" + equity + "]";
 	}
 	
 	

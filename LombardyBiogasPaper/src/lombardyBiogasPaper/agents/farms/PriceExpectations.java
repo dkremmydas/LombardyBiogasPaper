@@ -12,8 +12,8 @@ public class PriceExpectations {
 	
 	
 	
-	public PriceExpectations() {
-		this.initExpecations();
+	public PriceExpectations(HashMap<ArableCrop, Long> initExpectations) {
+		this.expectations=initExpectations;
 	}
 
 
@@ -22,32 +22,5 @@ public class PriceExpectations {
 		return this.expectations;
 	}
 	
-	
-	private void initExpecations() {
-		AvailableArableCrops cs = SimulationContext.getInstance().getCrops();
-		//expectations = cs.getPrices();
-		/**
-		 * 	ofc	150
-			ogl	120
-			sbt	30
-			sca	500
-			wme	220
-			alf	180
-			heg	120
-			drw	250
-			sfw	170
-			suf	200
-			bar	230
-			let	720
-			smze	30
-			mze	150
-			mel	480
-			pot	300
-			tom	90
-
-		 */
-		
-		
-	}
 	
 }

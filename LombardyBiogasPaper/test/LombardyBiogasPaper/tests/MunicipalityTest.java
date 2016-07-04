@@ -1,19 +1,15 @@
 package LombardyBiogasPaper.tests;
 
 import lombardyBiogasPaper.SimulationContext;
-import lombardyBiogasPaper.agents.municipalities.Municipality;
-import lombardyBiogasPaper.utilities.Utility;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import cern.jet.random.Normal;
 import repast.simphony.context.DefaultContext;
 import repast.simphony.engine.environment.DefaultScheduleRunner;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.parameter.DefaultParameters;
-import repast.simphony.random.RandomHelper;
 
 
 public class MunicipalityTest {
@@ -39,52 +35,7 @@ public class MunicipalityTest {
 		System.out.println(sc);
 	}
 	
-	/**
-	 * Does the {@link MunicipalityTest#yearTickCount()} works well ?
-	 */
-	@Test
-	public void initialPrices() {
-		Municipality m = (Municipality) sc.getSubContexts().iterator().next();
-		System.out.println(m.getPriceHistory());
-	}
 	
-	@Test
-	public void testNormalDistrGeneration() {
-		 Normal normalDistr= new Normal(10, 5, RandomHelper.getGenerator());
-		 
-		 System.out.println(normalDistr.nextDouble());
-		 System.out.println(normalDistr.nextDouble());
-		 System.out.println(normalDistr.nextDouble());
-	}
-	
-	@Test
-	public void priceCreation() {
-		RandomHelper.createNormal(0, 0.3);
-		Municipality m = (Municipality) sc.getSubContexts().iterator().next();
-		
-		System.out.println("Year count: " + sc.getCurrentYear());
-		
-		RunEnvironment.getInstance().getCurrentSchedule().execute();
-		System.out.println("Year count: " + sc.getCurrentYear());
-		m.insertToPriceHistory(sc.getCurrentYear(), m.getPriceRealizationRule().getPrices());
-		
-		for(int i=0;i<30;i++) {
-			RunEnvironment.getInstance().getCurrentSchedule().execute();
-			m.insertToPriceHistory(sc.getCurrentYear(), m.getPriceRealizationRule().getPrices());
-			System.out.println("Year count: " + sc.getCurrentYear());
-		}
-		
-		//System.out.println(m.getPriceHistory());	
-		System.out.println(Utility.convertTabletoCsv(m.getPriceHistory()));;
-	}
-	
-	@Test
-	public void longComparison() {
-		Long t = -1l;
-		System.out.println(t.compareTo(0l));
-		if(t.compareTo(1l)<0) {t=2l;}
-		System.out.println(t);
-	}
 	
 	
 }
