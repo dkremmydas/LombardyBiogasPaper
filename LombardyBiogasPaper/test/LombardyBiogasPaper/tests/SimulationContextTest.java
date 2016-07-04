@@ -40,6 +40,11 @@ public class SimulationContextTest {
 		System.out.println(sc.getCrops());
 	}
 	
+	@Test
+	public void realityGenerator() {
+		System.out.println(sc.getRealityGenerator().getYields());
+	}
+	
 	/**
 	 * Does the {@link SimulationContextTest#yearTickCount()} works well ?
 	 */

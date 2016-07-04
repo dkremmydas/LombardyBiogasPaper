@@ -10,6 +10,7 @@ import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 import lombardyBiogasPaper.dataLoaders.ExcelDataLoader;
+import lombardyBiogasPaper.realityGenerators.RealityGenerator;
 
 import org.apache.log4j.Level;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -19,6 +20,7 @@ import repast.simphony.context.DefaultContext;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.random.RandomHelper;
 import simphony.util.messages.MessageCenter;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -29,6 +31,8 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	private static SimulationContext instance=null;
 	
 	private AvailableArableCrops crops = new AvailableArableCrops();
+	
+	private RealityGenerator realityGenerator = new RealityGenerator();
 	
 	private int yearCount = -1;
 
@@ -49,6 +53,7 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	public SimulationContext() {
 		super("SimulationContext","SimulationContext");
 		SimulationContext.instance = this;
+		RandomHelper.createNormal(100, 50);
 	}
 
 
@@ -106,6 +111,10 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 			}
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Farms Loaded. \nSimulationContext contains:\n"+this.toString());
 			
+			//setup additional simulationcontext
+			edl.setupSimulationContext(this);
+			
+			
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -137,8 +146,11 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 		
 		return ms;
 	}
-
 	
+	public RealityGenerator getRealityGenerator() {
+		return realityGenerator;
+	}
+
 	@Override
 	public String toString() {
 		String r = "SimulationContext [ Municipalities: ";

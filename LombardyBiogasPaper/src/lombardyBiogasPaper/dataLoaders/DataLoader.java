@@ -2,6 +2,7 @@ package lombardyBiogasPaper.dataLoaders;
 
 import java.util.ArrayList;
 
+import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
@@ -34,5 +35,12 @@ public interface DataLoader {
 	 * @return
 	 */
 	ArrayListMultimap<Integer,Farm> getFarms();
+	
+	
+	/**
+	 * Setup any additional state variable of the {@link SimulationContext}
+	 * @param sc
+	 */
+	void setupSimulationContext(SimulationContext sc);
 
 }

@@ -29,7 +29,7 @@ public class ExcelDataLoader implements DataLoader {
 	private Workbook excelWB; 
 	
 	private HashMap<ArableCrop,Long> initPrices = new HashMap<>();
-	
+	private HashMap<ArableCrop,Float> initYields = new HashMap<>();
 	
 	/**
 	 * Constructor
@@ -73,10 +73,12 @@ public class ExcelDataLoader implements DataLoader {
 			String name = row.getCell(1).getStringCellValue();
 			String originalName = row.getCell(2).getStringCellValue();	
 			Long price = (long)(row.getCell(3).getNumericCellValue());
+			Float yield = (float)(row.getCell(4).getNumericCellValue());
 			ArableCrop c = new ArableCrop(id, name, originalName);
 			SimulationContext.logMessage(this.getClass(), Level.DEBUG, "created crop:" + c);
 			r.add(c);
 			this.initPrices.put(c,price);
+			this.initYields.put(c,yield);
 		}
 		return r;
 	}
@@ -176,6 +178,13 @@ public class ExcelDataLoader implements DataLoader {
 		}
 		
 		return f;
+	}
+
+	@Override
+	public void setupSimulationContext(SimulationContext sc) {
+		//update initial yields
+		sc.getRealityGenerator().getYields().putAll(this.initYields);
+		
 	}
 
 	

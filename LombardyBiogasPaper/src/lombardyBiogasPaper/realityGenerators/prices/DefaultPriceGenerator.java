@@ -1,40 +1,48 @@
 package lombardyBiogasPaper.realityGenerators.prices;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
+import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import repast.simphony.random.RandomHelper;
-import cern.jet.random.Normal;
 
+/**
+ * Generates prices for a set of crops. 
+ * A problem is that prices between crops are correlated
+ * 
+ * @author Dimitris Kremmydas
+ *
+ */
 public class DefaultPriceGenerator implements PriceGenerator {
 
-	private Map<ArableCrop,Long> previousPrices = new HashMap<>();
+	private Municipality parentMunicipality;
 	
-	private float sigma ; //it is initialized to 0.3f in the constructor
+	private double sigma ; //it is initialized to 0.3f in the constructor
 	
-	private Normal normalDistr;
-	
-	public DefaultPriceGenerator(Map<ArableCrop, Long> previousPrices) {
-		this(previousPrices,30);
+	public DefaultPriceGenerator(Municipality m) {
+		this(m,0.05d);
 	}
 	
-	public DefaultPriceGenerator(Map<ArableCrop, Long> previousPrices,
-			float sigma) {
+	public DefaultPriceGenerator(Municipality m,
+			double sigma) {
 		super();
-		this.previousPrices = previousPrices;
-		this.normalDistr = new Normal(100, 50,RandomHelper.getGenerator());
+		this.parentMunicipality = m;
+		this.sigma = sigma;
 	}
 	
 
 	@Override
 	public HashMap<ArableCrop,Long> getPrices() {
+		int currentYear = SimulationContext.getInstance().getCurrentYear();
 		HashMap<ArableCrop,Long> r = new HashMap<>();
 		Iterable<ArableCrop> cs = SimulationContext.getInstance().getCrops().getAll();
 		for(ArableCrop c: cs) {
-			Double factor = this.normalDistr.nextDouble();
-			Long newVal = (long) (this.previousPrices.get(c) *( 1 + factor));
+			//Double factor = this.normalDistr.nextDouble();
+			Double factor = RandomHelper.getNormal().nextDouble(0,sigma);
+			Long oldVal = this.parentMunicipality.getPriceHistory().get(currentYear-1,c);
+			Long newVal = (long) (oldVal *( 1 + factor));
+			if(newVal.compareTo(1l)<0) {newVal = 2l;} //TODO It should work with compareTo(0l)
 			r.put(c, newVal);
 		}
 		return r;

@@ -16,6 +16,7 @@ public class Municipality extends DefaultContext<Farm> {
 	private String originalName;
 	
 	private Table<Integer,ArableCrop,Long> priceHistory = HashBasedTable.create();
+	private Table<Integer,ArableCrop,Float> yieldHistory = HashBasedTable.create();
 	
 	private PriceGenerator priceRealizationRule; 
 
@@ -28,7 +29,7 @@ public class Municipality extends DefaultContext<Farm> {
 			priceHistory.put(-1, c, initPrices.get(c));
 		}
 		
-		priceRealizationRule = new DefaultPriceGenerator(priceHistory.rowMap().get(-1));
+		priceRealizationRule = new DefaultPriceGenerator(this);
 		
 	}
 	

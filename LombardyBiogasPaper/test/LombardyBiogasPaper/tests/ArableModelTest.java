@@ -51,7 +51,7 @@ public class ArableModelTest {
 		solve.updateFarmLandUse();
 		
 		RealityGenerator pr = new RealityGenerator();
-		pr.realizeProduction();
+		//pr.realizeProduction();
 		
 		
 		

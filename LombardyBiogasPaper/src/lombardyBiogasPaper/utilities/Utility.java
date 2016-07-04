@@ -65,5 +65,27 @@ public class Utility {
 		return t;
 	}
 	
+	public static <A,B,C> String convertTabletoCsv(Table<A,B,C> t) {
+		String r="";
+		
+		//print headers
+		r += "\n";
+		for(B col: t.columnKeySet()) {
+			r += "\t" + col;
+		}
+
+		
+		//print data
+		for(A row: t.rowKeySet()) {
+			r += "\n" + row;
+			for(B col: t.columnKeySet()) {
+				r += "\t" + t.get(row, col);
+			}
+		}
+		
+
+		return r;
+	}
+	
 
 }
