@@ -31,8 +31,12 @@ public class Municipality extends DefaultContext<Farm> {
 	
 	public Long getAverageCash() {
 		Long r = 0l;
+		boolean first=true;
 		for(Farm f: this.getAllFarms()) {
-			r = ((long)r + (long)f.getAccount().getCash())/(long)2;
+			if(first) {r=(long)f.getAccount().getCash();first=false;}
+			else {
+				r = ((long)r + (long)f.getAccount().getCash())/2;
+			}
 		}
 		return r;
 	}

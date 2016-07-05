@@ -2,7 +2,7 @@ package lombardyBiogasPaper.agents.farms;
 
 import java.util.HashMap;
 
-import lombardyBiogasPaper.agents.farms.priceExpectations.FixedPriceExpectation;
+import lombardyBiogasPaper.agents.farms.priceExpectations.PriceExpectation;
 import lombardyBiogasPaper.crops.ArableCrop;
 
 
@@ -22,7 +22,7 @@ public class Farm  {
 	/**
 	 * PriceExpectationRule
 	 */
-	private FixedPriceExpectation priceExp; //you have to set in constructor
+	private PriceExpectation priceExp; //you have to set in constructor
 	
 	/**
 	 * The current allocated production area for each arableCrop
@@ -100,7 +100,7 @@ public class Farm  {
 		this.totalLand = totalLand;
 	}
 
-	public FixedPriceExpectation getPriceExpectationObject() {
+	public PriceExpectation getPriceExpectationObject() {
 		return priceExp;
 	}
 	
@@ -112,8 +112,8 @@ public class Farm  {
 		return account;
 	}
 
-	public void setPriceExp(FixedPriceExpectation priceExp) {
-		this.priceExp = priceExp;
+	public void setPriceExp(PriceExpectation pe) {
+		this.priceExp = pe;
 	}
 
 	

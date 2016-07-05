@@ -9,7 +9,7 @@ import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
-import lombardyBiogasPaper.agents.farms.priceExpectations.FixedPriceExpectation;
+import lombardyBiogasPaper.agents.farms.priceExpectations.PriceExpectation;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
@@ -102,10 +102,20 @@ public class ExcelDataLoader implements DataLoader {
 			String name = row.getCell(2).getStringCellValue();	
 			//String ismixed = row.getCell(3).getStringCellValue();
 			Long cash = (long)row.getCell(4).getNumericCellValue();
+			String expRuleClass = row.getCell(5).getStringCellValue();			
 			Farm f = new Farm(farm_id,name);
 			f.getAccount().addCash(cash);
-			f.setPriceExp(new FixedPriceExpectation(this.initPrices));
-			r.put(mun_id, f);
+			
+			try {
+				PriceExpectation pe = (PriceExpectation) Class.forName(expRuleClass).newInstance();
+				f.setPriceExp(pe);
+				r.put(mun_id, f);
+			} catch (InstantiationException | IllegalAccessException
+					| ClassNotFoundException e) {
+				e.printStackTrace();
+				throw new RuntimeException("Could not Load Class: " + expRuleClass + "\nError: " + e); 
+			}
+			
 		}
 		
 		//load farm data
@@ -194,6 +204,8 @@ public class ExcelDataLoader implements DataLoader {
 		
 		//set production solver
 		sc.setSolveProductionDecision(new ProductionDecisionCollector());
+		
+		
 		
 	}
 

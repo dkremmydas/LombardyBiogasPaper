@@ -78,6 +78,11 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	public int getCurrentYear() {
 		return this.yearCount;
 	}
+	
+	public Iterable<Object> getAllFarms() {
+		Iterable<Object> allFarms = SimulationContext.getInstance().getObjects(Farm.class);
+		return allFarms;
+	}
 
 	/**
 	 * It builds the Contexts of Agroscape. <br />
@@ -116,6 +121,14 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 			
 			//setup additional simulationcontext
 			edl.setupSimulationContext(this);
+			
+			//init any rules
+			////init Expectation
+			for(Municipality m : this.getMunicipalities()) {
+				for(Farm f: m.getAllFarms()) {
+					f.getPriceExpectationObject().initExpectations();
+				}
+			}
 			
 			
 		} catch (InvalidFormatException e) {

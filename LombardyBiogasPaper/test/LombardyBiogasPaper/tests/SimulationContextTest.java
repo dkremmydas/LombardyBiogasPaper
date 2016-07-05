@@ -17,6 +17,7 @@ import repast.simphony.parameter.DefaultParameters;
 import repast.simphony.random.RandomHelper;
 
 import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Table;
 
 
@@ -121,6 +122,14 @@ public class SimulationContextTest {
 	}
 	
 	@Test
+	public void getAllFarmersFromSimulationContext() {
+		Iterable<Object> allFarms = SimulationContext.getInstance().getObjects(Farm.class);
+		System.out.println(Iterables.size(allFarms));
+		System.out.println(allFarms);
+		
+	}
+	
+	@Test
 	public void simulationCycleTestCashAverage() {
 		System.out.println("# Scheduled Actions: " + RunEnvironment.getInstance().getCurrentSchedule().getActionCount());
 		RandomHelper.createNormal(0, 0.3);
@@ -131,8 +140,9 @@ public class SimulationContextTest {
 			cashHistory.put(m, sc.getCurrentYear(), avg);
 			System.out.println("Mun: " + m.getId() + " Avg Cash:" + avg);
 		}
+				
 		
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<2;i++) {
 			RunEnvironment.getInstance().getCurrentSchedule().execute();
 			System.out.println("Year count: " + sc.getCurrentYear());
 			for(Municipality m: sc.getMunicipalities()) {
