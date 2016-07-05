@@ -16,7 +16,8 @@ import com.google.common.io.Files;
 
 
 /*
- * Responsible for solving GAMS model that contain a bunch of Farmers
+ * Responsible for solving GAMS model with several files.
+ * It takes them
  * A gams model file and an input.gdx have to be provided. 
  * The results are provided by a sqlite database containing the output of the model
  * 

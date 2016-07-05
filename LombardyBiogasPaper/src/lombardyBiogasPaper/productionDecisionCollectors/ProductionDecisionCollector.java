@@ -16,6 +16,7 @@ import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 
 import com.gams.api.GAMSDatabase;
@@ -54,12 +55,12 @@ public class ProductionDecisionCollector {
 	 */
 	private Table<String, String, Float> solutionResults = HashBasedTable.create();
 	
+	private String modelTemplateDir ="C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm\\";
+	
 	
 	private GAMSDatabase db, dbResults; private GAMSJob job;
 
 	private File workingDir;
-
-	private Boolean usedWorkingDir;
 
 	/**
 	 *  //TODO Documentation
@@ -77,7 +78,40 @@ public class ProductionDecisionCollector {
 		return this.solutionResults;
 	}
 	
+	
+	private void prepareWorkingDirectory() throws IOException {
+		this.getNewWorkingDir();
+		//copy everything
+		FileUtils.copyFile(new File(modelTemplateDir+"arableFarmModel.Java.gms"), 
+				new File(this.workingDir+File.separator+"arableFarmModel.Java.gms"));
+		
+		FileUtils.copyFile(new File(modelTemplateDir+"loadData.Java.gms"), 
+				new File(this.workingDir+File.separator+"loadData.Java.gms"));
+		
+		FileUtils.copyFile(new File(modelTemplateDir+"definitions.Java.gms"), 
+				new File(this.workingDir+File.separator+"definitions.Java.gms"));
+		
+		FileUtils.copyFile(new File(modelTemplateDir+"data.gdx"), 
+				new File(this.workingDir+File.separator+"data.gdx"));
+		
+		System.out.println("Solving GAMS problem in " + this.workingDir.getAbsolutePath());
+
+		
+		//set
+		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Solving GAMS problem in " + this.workingDir.getAbsolutePath());
+		ginfo = new GAMSWorkspaceInfo(this.workingDir.getAbsolutePath(), 
+			"C:\\GAMS\\win64\\24.0",
+			false);
+}
+	
 	public void solve() {
+		try {
+			this.prepareWorkingDirectory();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}	
+		ws = new GAMSWorkspace(ginfo);
+		
 		this.db = ws.addDatabase("farmData");
 		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Building Parameters from Farms");
 		this.createFarmData();
@@ -188,7 +222,6 @@ public class ProductionDecisionCollector {
 			e.printStackTrace();
 		}
 		this.workingDir = Files.createTempDir();
-		usedWorkingDir=Boolean.FALSE;
 	}
 	
 	private void deleteExistingWorkingDir() throws IOException {
