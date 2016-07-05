@@ -9,7 +9,7 @@ import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
-import lombardyBiogasPaper.agents.farms.PriceExpectations;
+import lombardyBiogasPaper.agents.farms.priceExpectations.FixedPriceExpectation;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
@@ -104,7 +104,7 @@ public class ExcelDataLoader implements DataLoader {
 			Long cash = (long)row.getCell(4).getNumericCellValue();
 			Farm f = new Farm(farm_id,name);
 			f.getAccount().addCash(cash);
-			f.setPriceExp(new PriceExpectations(this.initPrices));
+			f.setPriceExp(new FixedPriceExpectation(this.initPrices));
 			r.put(mun_id, f);
 		}
 		

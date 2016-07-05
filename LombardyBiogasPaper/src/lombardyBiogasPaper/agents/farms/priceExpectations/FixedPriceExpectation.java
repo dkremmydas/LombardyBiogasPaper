@@ -1,4 +1,4 @@
-package lombardyBiogasPaper.agents.farms;
+package lombardyBiogasPaper.agents.farms.priceExpectations;
 
 import java.util.HashMap;
 
@@ -6,13 +6,13 @@ import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.crops.ArableCrop;
 import lombardyBiogasPaper.crops.AvailableArableCrops;
 
-public class PriceExpectations {
+public class FixedPriceExpectation {
 
 	private HashMap<ArableCrop, Long> expectations = new HashMap<>();
 	
 	
 	
-	public PriceExpectations(HashMap<ArableCrop, Long> initExpectations) {
+	public FixedPriceExpectation(HashMap<ArableCrop, Long> initExpectations) {
 		this.expectations=initExpectations;
 	}
 

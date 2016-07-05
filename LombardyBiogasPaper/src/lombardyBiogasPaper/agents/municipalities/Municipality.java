@@ -29,5 +29,13 @@ public class Municipality extends DefaultContext<Farm> {
 		return this.getAgentLayer(Farm.class);
 	}
 	
+	public Long getAverageCash() {
+		Long r = 0l;
+		for(Farm f: this.getAllFarms()) {
+			r = ((long)r + (long)f.getAccount().getCash())/(long)2;
+		}
+		return r;
+	}
+	
 
 }
