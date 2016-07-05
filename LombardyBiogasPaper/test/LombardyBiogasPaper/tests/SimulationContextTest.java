@@ -1,9 +1,12 @@
 package LombardyBiogasPaper.tests;
 
+import java.io.IOException;
+
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.utilities.Utility;
+import lombardyBiogasPaper.utilities.gamsInterface.GamsModelSolver;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -48,8 +51,15 @@ public class SimulationContextTest {
 		System.out.println(sc.getCrops());
 	}
 	
+
+	@Test 
+	public void useNewGamsUtility() {
+		GamsModelSolver gs = new GamsModelSolver();
+		
+	}
+	
 	@Test
-	public void testUpdateFarmerSolveProduction() {
+	public void testUpdateFarmerSolveProduction() throws IOException {
 		RandomHelper.createNormal(0, 0.3);
 		Municipality m = (Municipality) sc.getSubContexts().iterator().next();
 		Farm f =  m.getRandomObject();
@@ -67,7 +77,7 @@ public class SimulationContextTest {
 	}
 	
 	@Test
-	public void productionCycle() {
+	public void productionCycle() throws IOException {
 		RandomHelper.createNormal(0, 0.3);
 		Municipality m = (Municipality) sc.getSubContexts().iterator().next();
 		Farm f =  m.getRandomObject();

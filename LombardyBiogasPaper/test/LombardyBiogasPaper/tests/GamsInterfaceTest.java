@@ -14,7 +14,7 @@ public class GamsInterfaceTest {
 	@Before
 	public void setUp() throws Exception {
 	}
-
+	
 	@Test
 	public void simpleGAMS() {
 		//System.out.println(System.getProperty("java.io.tmpdir"));

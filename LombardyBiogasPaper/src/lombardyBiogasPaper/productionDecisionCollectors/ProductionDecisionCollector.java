@@ -4,29 +4,23 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 import lombardyBiogasPaper.SimulationContext;
 import lombardyBiogasPaper.agents.farms.Farm;
 import lombardyBiogasPaper.agents.municipalities.Municipality;
 import lombardyBiogasPaper.crops.ArableCrop;
+import lombardyBiogasPaper.utilities.gamsInterface.GamsModelSolver;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
 
 import com.gams.api.GAMSDatabase;
 import com.gams.api.GAMSGlobals;
-import com.gams.api.GAMSJob;
-import com.gams.api.GAMSOptions;
 import com.gams.api.GAMSVariable;
 import com.gams.api.GAMSVariableRecord;
-import com.gams.api.GAMSWorkspace;
-import com.gams.api.GAMSWorkspaceInfo;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import com.google.common.io.Files;
@@ -38,29 +32,30 @@ import com.google.common.io.Files;
  * @author Dimitris Kremmydas
  *
  */
-public class ProductionDecisionCollector {
+public class ProductionDecisionCollector  {
 
-	private GAMSWorkspaceInfo ginfo = new GAMSWorkspaceInfo("C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm", 
-			"C:\\GAMS\\win64\\24.0",
-			false);
-
-	private GAMSWorkspace ws = new GAMSWorkspace(ginfo);
 	
-	private String modelFile="arableFarmModel.Java.gms";
-	private String farmDataFilename = "farmData.inc";
+	private String modelTemplateDir ="C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm\\";
+	
+	private String modelFile=modelTemplateDir+"arableFarmModel.Java.gms";
+	private ArrayList<String> datafiles = new ArrayList<>(Arrays.asList(
+			modelTemplateDir+"data.gdx", 
+			modelTemplateDir+"loadData.Java.gms", 
+			modelTemplateDir+"definitions.Java.gms"
+		));
 	private String farmData = "";
+	
+	private GamsModelSolver solver = new GamsModelSolver();
 	
 	/**
 	 * <Farm,ArableCrop>=Float
 	 */
 	private Table<String, String, Float> solutionResults = HashBasedTable.create();
 	
-	private String modelTemplateDir ="C:\\Users\\jkr\\Dropbox\\CurrentProjects\\Phd Proposal\\03. Work on progress\\Lombardy Biogas ABM\\model\\arableFarm\\";
 	
 	
-	private GAMSDatabase db, dbResults; private GAMSJob job;
+	private GAMSDatabase dbResults;
 
-	private File workingDir;
 
 	/**
 	 *  //TODO Documentation
@@ -79,51 +74,15 @@ public class ProductionDecisionCollector {
 	}
 	
 	
-	private void prepareWorkingDirectory() throws IOException {
-		this.getNewWorkingDir();
-		//copy everything
-		FileUtils.copyFile(new File(modelTemplateDir+"arableFarmModel.Java.gms"), 
-				new File(this.workingDir+File.separator+"arableFarmModel.Java.gms"));
+	public void solve() throws IOException {
 		
-		FileUtils.copyFile(new File(modelTemplateDir+"loadData.Java.gms"), 
-				new File(this.workingDir+File.separator+"loadData.Java.gms"));
-		
-		FileUtils.copyFile(new File(modelTemplateDir+"definitions.Java.gms"), 
-				new File(this.workingDir+File.separator+"definitions.Java.gms"));
-		
-		FileUtils.copyFile(new File(modelTemplateDir+"data.gdx"), 
-				new File(this.workingDir+File.separator+"data.gdx"));
-		
-		System.out.println("Solving GAMS problem in " + this.workingDir.getAbsolutePath());
-
-		
-		//set
-		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Solving GAMS problem in " + this.workingDir.getAbsolutePath());
-		ginfo = new GAMSWorkspaceInfo(this.workingDir.getAbsolutePath(), 
-			"C:\\GAMS\\win64\\24.0",
-			false);
-}
-	
-	public void solve() {
-		try {
-			this.prepareWorkingDirectory();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}	
-		ws = new GAMSWorkspace(ginfo);
-		
-		this.db = ws.addDatabase("farmData");
-		SimulationContext.logMessage(this.getClass(), Level.DEBUG, "Building Parameters from Farms");
 		this.createFarmData();
 		this.totalLandParameter();
 		this.writeFarmData();
 		
-		this.job = ws.addJobFromFile(modelFile);
-        GAMSOptions opt = ws.addOptions();
-        opt.defines("incname", farmDataFilename);
+		
         SimulationContext.logMessage(this.getClass(), Level.DEBUG, "finished... Running Job");
-        this.job.run(opt, db);
-        this.dbResults = this.job.OutDB();
+        this.dbResults = this.solver.solve(this.modelFile, this.datafiles);
         this.collectResults();
         this.updateFarmLandUse();
         SimulationContext.logMessage(this.getClass(), Level.DEBUG, "finished...");
@@ -153,15 +112,16 @@ public class ProductionDecisionCollector {
 	}
 	
 	private void writeFarmData() {
+		File tmp = Files.createTempDir();
+		String farminc = tmp + GAMSGlobals.FILE_SEPARATOR + "farmdata.inc";
 		try {
-		      BufferedWriter file = new BufferedWriter(new FileWriter(
-		                                ws.workingDirectory() + GAMSGlobals.FILE_SEPARATOR + farmDataFilename
-		                            ));
+		      BufferedWriter file = new BufferedWriter(new FileWriter(farminc));
 		      file.write(this.farmData);
 		      file.close();
+		      this.datafiles.add(farminc);
 		  } catch(IOException e) {
 		      e.printStackTrace();
-		      System.exit(-1);
+		      throw new RuntimeException(e);
 		  }
 	}
 	
@@ -211,36 +171,5 @@ public class ProductionDecisionCollector {
 	
 	
 	
-	private void getNewWorkingDir() {
-		try {
-			if(! (this.workingDir==null)) {
-				this.deleteExistingWorkingDir();
-			}
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		this.workingDir = Files.createTempDir();
-	}
-	
-	private void deleteExistingWorkingDir() throws IOException {
-		if(! this.workingDir.exists()) return;
-		java.nio.file.Files.walkFileTree(this.workingDir.toPath(), new SimpleFileVisitor<Path>() {
-			   @Override
-			   public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-				   java.nio.file.Files.delete(file);
-			       return FileVisitResult.CONTINUE;
-			   }
-
-			   @Override
-			   public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-				   java.nio.file.Files.delete(dir);
-			       return FileVisitResult.CONTINUE;
-			   }
-			});
-	}
-	
-	
-	
 } //end class
+

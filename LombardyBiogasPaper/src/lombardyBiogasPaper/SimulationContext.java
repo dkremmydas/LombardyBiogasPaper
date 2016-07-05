@@ -198,7 +198,11 @@ public class SimulationContext extends DefaultContext<Object> implements Context
 	public void step() {
 		//advance year count
 		this.yearCount++;
-		this.getSolveProductionDecision().solve();
+		try {
+			this.getSolveProductionDecision().solve();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		this.getRealityGenerator().realizeProduction();
 		
 	}
